@@ -1,0 +1,30 @@
+{
+  "word": "export",
+  "ipa": "/ˈɛkspɔːt/",
+  "pos": "verb / noun",
+  "definition": "To send goods or services to another country for sale.",
+  "etymology": "Latin exportare: ex- (out of) + portare (to carry)",
+  "parts": [
+    {"t": "ex-", "type": "prefix", "m": "out of"},
+    {"t": "port", "type": "root", "m": "to carry"}
+  ],
+  "orbits": {
+    "root": [
+      {"w": "import", "h": "carry in", "orbitable": false},
+      {"w": "transport", "h": "carry across", "orbitable": true},
+      {"w": "report", "h": "carry back", "orbitable": false},
+      {"w": "support", "h": "carry below", "orbitable": false},
+      {"w": "portable", "h": "able to carry", "orbitable": false}
+    ],
+    "prefix": [
+      {"w": "exclude", "h": "shut out", "orbitable": false},
+      {"w": "extend", "h": "stretch out", "orbitable": false},
+      {"w": "extract", "h": "pull out", "orbitable": false},
+      {"w": "examine", "h": "weigh carefully", "orbitable": false}
+    ],
+    "suffix": []
+  },
+  "frequency": 0.8,
+  "source": "curated",
+  "reviewed": true
+}

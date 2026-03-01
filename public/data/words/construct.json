@@ -1,0 +1,30 @@
+{
+  "word": "construct",
+  "ipa": "/kənˈstɹʌkt/",
+  "pos": "verb",
+  "definition": "To build or form by assembling parts together.",
+  "etymology": "Latin construere: con- (together) + struere (to build, to pile up)",
+  "parts": [
+    {"t": "con-", "type": "prefix", "m": "together"},
+    {"t": "struct", "type": "root", "m": "to build"}
+  ],
+  "orbits": {
+    "root": [
+      {"w": "destruct", "h": "un-build", "orbitable": false},
+      {"w": "instruct", "h": "build into the mind", "orbitable": false},
+      {"w": "obstruct", "h": "build against, block", "orbitable": false},
+      {"w": "structure", "h": "something built", "orbitable": false},
+      {"w": "reconstruct", "h": "build again", "orbitable": false}
+    ],
+    "prefix": [
+      {"w": "connect", "h": "tie together", "orbitable": false},
+      {"w": "conduct", "h": "lead together", "orbitable": false},
+      {"w": "contract", "h": "draw together", "orbitable": false},
+      {"w": "contribute", "h": "give together", "orbitable": false}
+    ],
+    "suffix": []
+  },
+  "frequency": 0.8,
+  "source": "curated",
+  "reviewed": true
+}

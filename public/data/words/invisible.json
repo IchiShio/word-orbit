@@ -1,0 +1,36 @@
+{
+  "word": "invisible",
+  "ipa": "/ɪnˈvɪzəbəl/",
+  "pos": "adjective",
+  "definition": "Unable to be seen; not visible to the eye.",
+  "etymology": "Latin invisibilis: in- (not) + visibilis (visible), from videre (to see) + -bilis (able to)",
+  "parts": [
+    {"t": "in-", "type": "prefix", "m": "not"},
+    {"t": "vis", "type": "root", "m": "to see"},
+    {"t": "-ible", "type": "suffix", "m": "able to be"}
+  ],
+  "orbits": {
+    "root": [
+      {"w": "vision", "h": "the act of sight", "orbitable": false},
+      {"w": "visible", "h": "can be seen", "orbitable": false},
+      {"w": "visual", "h": "relating to sight", "orbitable": false},
+      {"w": "supervise", "h": "oversee from above", "orbitable": false},
+      {"w": "visit", "h": "go to see", "orbitable": false}
+    ],
+    "prefix": [
+      {"w": "incomplete", "h": "not complete", "orbitable": false},
+      {"w": "incredible", "h": "not believable", "orbitable": false},
+      {"w": "indirect", "h": "not direct", "orbitable": false},
+      {"w": "independent", "h": "not dependent", "orbitable": false}
+    ],
+    "suffix": [
+      {"w": "possible", "h": "able to happen", "orbitable": false},
+      {"w": "flexible", "h": "able to bend", "orbitable": false},
+      {"w": "terrible", "h": "causing terror", "orbitable": false},
+      {"w": "edible", "h": "able to eat", "orbitable": false}
+    ]
+  },
+  "frequency": 0.8,
+  "source": "curated",
+  "reviewed": true
+}

@@ -1,0 +1,29 @@
+{
+  "word": "dictate",
+  "ipa": "/ˈdɪkˌteɪt/",
+  "pos": "verb",
+  "definition": "To say or read aloud for another to write down; to give orders.",
+  "etymology": "Latin dictare: dict- (to say, frequentative of dicere) + -ate (to do, to make)",
+  "parts": [
+    {"t": "dict", "type": "root", "m": "to say"},
+    {"t": "-ate", "type": "suffix", "m": "to make, to do"}
+  ],
+  "orbits": {
+    "root": [
+      {"w": "predict", "h": "say before", "orbitable": true},
+      {"w": "verdict", "h": "truth-say", "orbitable": false},
+      {"w": "contradict", "h": "say against", "orbitable": false},
+      {"w": "dictionary", "h": "book of words", "orbitable": false},
+      {"w": "indicate", "h": "point out", "orbitable": false}
+    ],
+    "prefix": [],
+    "suffix": [
+      {"w": "educate", "h": "lead out", "orbitable": false},
+      {"w": "create", "h": "bring into being", "orbitable": false},
+      {"w": "navigate", "h": "steer a course", "orbitable": false}
+    ]
+  },
+  "frequency": 0.6,
+  "source": "curated",
+  "reviewed": true
+}

@@ -1,0 +1,35 @@
+{
+  "word": "biography",
+  "ipa": "/baɪˈɒɡɹəfi/",
+  "pos": "noun",
+  "definition": "A written account of a person's life, published as a book.",
+  "etymology": "Greek biographia: bios (life) + graphein (to write) + -ia (state, result)",
+  "parts": [
+    {"t": "bio-", "type": "prefix", "m": "life"},
+    {"t": "graph", "type": "root", "m": "to write"},
+    {"t": "-y", "type": "suffix", "m": "state, result"}
+  ],
+  "orbits": {
+    "root": [
+      {"w": "autograph", "h": "self-write", "orbitable": false},
+      {"w": "photograph", "h": "light-write", "orbitable": false},
+      {"w": "telegraph", "h": "far-write", "orbitable": false},
+      {"w": "geography", "h": "earth-write", "orbitable": false},
+      {"w": "graphic", "h": "of writing", "orbitable": false}
+    ],
+    "prefix": [
+      {"w": "biology", "h": "study of life", "orbitable": false},
+      {"w": "biopsy", "h": "life-view", "orbitable": false},
+      {"w": "biome", "h": "life-zone", "orbitable": false},
+      {"w": "biodiversity", "h": "life variety", "orbitable": false}
+    ],
+    "suffix": [
+      {"w": "photography", "h": "art of light-writing", "orbitable": false},
+      {"w": "democracy", "h": "people-rule", "orbitable": false},
+      {"w": "philosophy", "h": "love of wisdom", "orbitable": false}
+    ]
+  },
+  "frequency": 0.7,
+  "source": "curated",
+  "reviewed": true
+}

@@ -1,0 +1,30 @@
+{
+  "word": "transport",
+  "ipa": "/ˈtɹænspɔːt/",
+  "pos": "noun / verb",
+  "definition": "To carry or convey from one place to another.",
+  "etymology": "Latin transportare: trans- (across) + portare (to carry)",
+  "parts": [
+    {"t": "trans-", "type": "prefix", "m": "across"},
+    {"t": "port", "type": "root", "m": "to carry"}
+  ],
+  "orbits": {
+    "root": [
+      {"w": "export", "h": "carry out", "orbitable": true},
+      {"w": "import", "h": "carry in", "orbitable": false},
+      {"w": "report", "h": "carry back", "orbitable": false},
+      {"w": "support", "h": "carry below", "orbitable": false},
+      {"w": "portable", "h": "able to carry", "orbitable": false}
+    ],
+    "prefix": [
+      {"w": "transfer", "h": "carry across", "orbitable": false},
+      {"w": "translate", "h": "carry across language", "orbitable": false},
+      {"w": "transform", "h": "change form across", "orbitable": false},
+      {"w": "transparent", "h": "appear across", "orbitable": false}
+    ],
+    "suffix": []
+  },
+  "frequency": 1.0,
+  "source": "curated",
+  "reviewed": true
+}

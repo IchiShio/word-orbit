@@ -1,0 +1,30 @@
+{
+  "word": "predict",
+  "ipa": "/pɹɪˈdɪkt/",
+  "pos": "verb",
+  "definition": "To forecast or estimate a future event on the basis of knowledge and reasoning.",
+  "etymology": "Latin praedīcere: prae- (before) + dīcere (to say)",
+  "parts": [
+    {"t": "pre-", "type": "prefix", "m": "before"},
+    {"t": "dict", "type": "root", "m": "to say, speak"}
+  ],
+  "orbits": {
+    "root": [
+      {"w": "dictate", "h": "say aloud", "orbitable": true},
+      {"w": "verdict", "h": "truth + say", "orbitable": false},
+      {"w": "dictionary", "h": "book of words", "orbitable": false},
+      {"w": "contradict", "h": "say against", "orbitable": false},
+      {"w": "indicate", "h": "point out", "orbitable": false}
+    ],
+    "prefix": [
+      {"w": "preview", "h": "see before", "orbitable": false},
+      {"w": "prepare", "h": "ready before", "orbitable": false},
+      {"w": "prevent", "h": "come before", "orbitable": false},
+      {"w": "precede", "h": "go before", "orbitable": false}
+    ],
+    "suffix": []
+  },
+  "frequency": 1.0,
+  "source": "curated",
+  "reviewed": true
+}
