@@ -1,0 +1,64 @@
+{
+  "word": "video",
+  "ipa": "/ˈvɪdioʊ/",
+  "pos": "noun",
+  "definition": "a recording of moving images with sound, or the medium used to capture and display such recordings.",
+  "etymology": "Latin vidēre (to see) + -o (noun suffix)",
+  "parts": [
+    {
+      "t": "vid",
+      "type": "root",
+      "m": "to see"
+    },
+    {
+      "t": "-o",
+      "type": "suffix",
+      "m": "noun ending"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "visible",
+        "h": "able to see",
+        "orbitable": true
+      },
+      {
+        "w": "vision",
+        "h": "act of seeing",
+        "orbitable": true
+      },
+      {
+        "w": "evidence",
+        "h": "to see, make clear",
+        "orbitable": true
+      },
+      {
+        "w": "video",
+        "h": "I see",
+        "orbitable": false
+      },
+      {
+        "w": "evident",
+        "h": "clear to see",
+        "orbitable": false
+      }
+    ],
+    "prefix": [],
+    "suffix": [
+      {
+        "w": "studio",
+        "h": "place to study",
+        "orbitable": false
+      },
+      {
+        "w": "portfolio",
+        "h": "sheet carrying",
+        "orbitable": false
+      }
+    ]
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

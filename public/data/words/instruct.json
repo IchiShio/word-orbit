@@ -1,0 +1,80 @@
+{
+  "word": "instruct",
+  "ipa": "/ɪnˈstrʌkt/",
+  "pos": "verb",
+  "definition": "To teach or provide someone with information or directions on how to do something.",
+  "etymology": "Latin instruere: in- (in, into) + struere (to build, arrange)",
+  "parts": [
+    {
+      "t": "in-",
+      "type": "prefix",
+      "m": "in, into"
+    },
+    {
+      "t": "struct",
+      "type": "root",
+      "m": "to build, arrange"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "structure",
+        "h": "build, arrange",
+        "orbitable": true
+      },
+      {
+        "w": "construct",
+        "h": "build together",
+        "orbitable": true
+      },
+      {
+        "w": "instruct",
+        "h": "build into",
+        "orbitable": true
+      },
+      {
+        "w": "obstruct",
+        "h": "build against",
+        "orbitable": false
+      },
+      {
+        "w": "destruction",
+        "h": "undo building",
+        "orbitable": false
+      }
+    ],
+    "prefix": [
+      {
+        "w": "inside",
+        "h": "in, within",
+        "orbitable": false
+      },
+      {
+        "w": "income",
+        "h": "in, into",
+        "orbitable": false
+      },
+      {
+        "w": "install",
+        "h": "in, into",
+        "orbitable": false
+      }
+    ],
+    "suffix": [
+      {
+        "w": "instruction",
+        "h": "act of teaching",
+        "orbitable": true
+      },
+      {
+        "w": "instructor",
+        "h": "one who teaches",
+        "orbitable": true
+      }
+    ]
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

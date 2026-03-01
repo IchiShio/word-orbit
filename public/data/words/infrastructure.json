@@ -1,0 +1,90 @@
+{
+  "word": "infrastructure",
+  "ipa": "/ˌɪnfrəˈstrʌktʃər/",
+  "pos": "noun",
+  "definition": "The basic physical systems and facilities needed for a country or organization to function, such as roads, bridges, and utilities.",
+  "etymology": "Latin infra (below, beneath) + Medieval Latin structura (arrangement, construction), from Latin struere (to build)",
+  "parts": [
+    {
+      "t": "infra-",
+      "type": "prefix",
+      "m": "below, beneath"
+    },
+    {
+      "t": "struct",
+      "type": "root",
+      "m": "to build, arrange"
+    },
+    {
+      "t": "-ure",
+      "type": "suffix",
+      "m": "state or condition of"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "structure",
+        "h": "arrangement, construction",
+        "orbitable": true
+      },
+      {
+        "w": "construct",
+        "h": "build together",
+        "orbitable": true
+      },
+      {
+        "w": "instruct",
+        "h": "build into",
+        "orbitable": true
+      },
+      {
+        "w": "obstruct",
+        "h": "block, hinder",
+        "orbitable": false
+      },
+      {
+        "w": "destruct",
+        "h": "break down",
+        "orbitable": false
+      }
+    ],
+    "prefix": [
+      {
+        "w": "infrared",
+        "h": "below red light",
+        "orbitable": true
+      },
+      {
+        "w": "infrasound",
+        "h": "below audible range",
+        "orbitable": false
+      },
+      {
+        "w": "infraorbital",
+        "h": "below the orbit",
+        "orbitable": false
+      }
+    ],
+    "suffix": [
+      {
+        "w": "structure",
+        "h": "arrangement, construction",
+        "orbitable": true
+      },
+      {
+        "w": "procedure",
+        "h": "process, method",
+        "orbitable": true
+      },
+      {
+        "w": "exposure",
+        "h": "state of being exposed",
+        "orbitable": false
+      }
+    ]
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

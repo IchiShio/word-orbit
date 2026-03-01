@@ -1,0 +1,69 @@
+{
+  "word": "vision",
+  "ipa": "/ˈvɪʒən/",
+  "pos": "noun",
+  "definition": "The ability to see or an image of something imagined or desired for the future.",
+  "etymology": "Latin visio: vidēre (to see) + -io (noun suffix)",
+  "parts": [
+    {
+      "t": "vis",
+      "type": "root",
+      "m": "to see"
+    },
+    {
+      "t": "-ion",
+      "type": "suffix",
+      "m": "state or act of"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "visible",
+        "h": "able to see",
+        "orbitable": true
+      },
+      {
+        "w": "visualize",
+        "h": "form mental image",
+        "orbitable": true
+      },
+      {
+        "w": "video",
+        "h": "recorded images",
+        "orbitable": false
+      },
+      {
+        "w": "visit",
+        "h": "go see",
+        "orbitable": false
+      },
+      {
+        "w": "visor",
+        "h": "mask for eyes",
+        "orbitable": false
+      }
+    ],
+    "prefix": [],
+    "suffix": [
+      {
+        "w": "action",
+        "h": "state of acting",
+        "orbitable": false
+      },
+      {
+        "w": "creation",
+        "h": "act of creating",
+        "orbitable": false
+      },
+      {
+        "w": "emotion",
+        "h": "state of feeling",
+        "orbitable": false
+      }
+    ]
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

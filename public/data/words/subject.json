@@ -1,0 +1,69 @@
+{
+  "word": "subject",
+  "ipa": "/ˈsʌbdʒɪkt/",
+  "pos": "noun, verb",
+  "definition": "A person or thing being discussed, studied, or acted upon; to cause someone to experience something unwillingly.",
+  "etymology": "Latin subicere: sub- (under) + iacere (to throw)",
+  "parts": [
+    {
+      "t": "sub-",
+      "type": "prefix",
+      "m": "under"
+    },
+    {
+      "t": "ject",
+      "type": "root",
+      "m": "to throw"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "reject",
+        "h": "throw back",
+        "orbitable": true
+      },
+      {
+        "w": "inject",
+        "h": "throw into",
+        "orbitable": true
+      },
+      {
+        "w": "object",
+        "h": "throw against",
+        "orbitable": true
+      },
+      {
+        "w": "project",
+        "h": "throw forward",
+        "orbitable": false
+      },
+      {
+        "w": "trajectory",
+        "h": "throw across",
+        "orbitable": false
+      }
+    ],
+    "prefix": [
+      {
+        "w": "submarine",
+        "h": "under water",
+        "orbitable": false
+      },
+      {
+        "w": "subtitle",
+        "h": "under title",
+        "orbitable": false
+      },
+      {
+        "w": "submit",
+        "h": "put under",
+        "orbitable": true
+      }
+    ],
+    "suffix": []
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

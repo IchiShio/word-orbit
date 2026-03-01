@@ -1,0 +1,69 @@
+{
+  "word": "spectacle",
+  "ipa": "/ˈspɛktəkəl/",
+  "pos": "noun",
+  "definition": "A visually striking or impressive display or performance, often involving a large audience.",
+  "etymology": "Latin spectaculum: spectāre (to watch, view) + -culum (instrument, place)",
+  "parts": [
+    {
+      "t": "spect",
+      "type": "root",
+      "m": "to watch, see"
+    },
+    {
+      "t": "-acle",
+      "type": "suffix",
+      "m": "place, instrument"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "spectator",
+        "h": "one who watches",
+        "orbitable": true
+      },
+      {
+        "w": "inspect",
+        "h": "look into, examine",
+        "orbitable": true
+      },
+      {
+        "w": "respect",
+        "h": "look back at, regard",
+        "orbitable": true
+      },
+      {
+        "w": "aspect",
+        "h": "appearance, view",
+        "orbitable": false
+      },
+      {
+        "w": "suspect",
+        "h": "view with doubt",
+        "orbitable": false
+      }
+    ],
+    "prefix": [],
+    "suffix": [
+      {
+        "w": "obstacle",
+        "h": "thing standing in the way",
+        "orbitable": true
+      },
+      {
+        "w": "tentacle",
+        "h": "arm-like appendage",
+        "orbitable": false
+      },
+      {
+        "w": "miracle",
+        "h": "wonderful event",
+        "orbitable": false
+      }
+    ]
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

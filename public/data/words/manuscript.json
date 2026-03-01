@@ -1,0 +1,69 @@
+{
+  "word": "manuscript",
+  "ipa": "/ˈmænjʊˌskrɪpt/",
+  "pos": "noun",
+  "definition": "a handwritten or typed document, especially an author's original text before publication.",
+  "etymology": "Latin manuscriptus: manu- (by hand) + scriptus (written, from scribere 'to write')",
+  "parts": [
+    {
+      "t": "manu-",
+      "type": "prefix",
+      "m": "by hand"
+    },
+    {
+      "t": "script",
+      "type": "root",
+      "m": "to write"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "script",
+        "h": "written text",
+        "orbitable": true
+      },
+      {
+        "w": "describe",
+        "h": "write about",
+        "orbitable": true
+      },
+      {
+        "w": "prescribe",
+        "h": "write before",
+        "orbitable": false
+      },
+      {
+        "w": "subscribe",
+        "h": "write under",
+        "orbitable": false
+      },
+      {
+        "w": "inscription",
+        "h": "write into",
+        "orbitable": false
+      }
+    ],
+    "prefix": [
+      {
+        "w": "manual",
+        "h": "by hand",
+        "orbitable": true
+      },
+      {
+        "w": "manufacture",
+        "h": "make by hand",
+        "orbitable": true
+      },
+      {
+        "w": "manure",
+        "h": "work by hand",
+        "orbitable": false
+      }
+    ],
+    "suffix": []
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

@@ -1,0 +1,85 @@
+{
+  "word": "photograph",
+  "ipa": "/ˈfoʊtəɡræf/",
+  "pos": "noun, verb",
+  "definition": "A picture made by a camera using light; to take a picture with a camera.",
+  "etymology": "Greek photo- (light) + -graph (to write, draw): literally 'writing with light'",
+  "parts": [
+    {
+      "t": "photo-",
+      "type": "prefix",
+      "m": "light"
+    },
+    {
+      "t": "graph",
+      "type": "root",
+      "m": "to write, draw, record"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "graph",
+        "h": "write, draw",
+        "orbitable": true
+      },
+      {
+        "w": "graphic",
+        "h": "visual, written",
+        "orbitable": true
+      },
+      {
+        "w": "paragraph",
+        "h": "section of writing",
+        "orbitable": true
+      },
+      {
+        "w": "autograph",
+        "h": "self-written signature",
+        "orbitable": false
+      },
+      {
+        "w": "diagram",
+        "h": "visual representation",
+        "orbitable": false
+      }
+    ],
+    "prefix": [
+      {
+        "w": "photosynthesis",
+        "h": "light + make",
+        "orbitable": true
+      },
+      {
+        "w": "photocopy",
+        "h": "light + copy",
+        "orbitable": false
+      },
+      {
+        "w": "photograph",
+        "h": "light + write",
+        "orbitable": true
+      }
+    ],
+    "suffix": [
+      {
+        "w": "biography",
+        "h": "life + write",
+        "orbitable": true
+      },
+      {
+        "w": "geography",
+        "h": "earth + write",
+        "orbitable": true
+      },
+      {
+        "w": "calligraphy",
+        "h": "beautiful writing",
+        "orbitable": false
+      }
+    ]
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

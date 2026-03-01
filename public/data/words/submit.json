@@ -1,0 +1,69 @@
+{
+  "word": "submit",
+  "ipa": "/səbˈmɪt/",
+  "pos": "verb",
+  "definition": "to accept or yield to authority, or to present something for consideration or approval.",
+  "etymology": "Latin submittere: sub- (under) + mittere (to send, place)",
+  "parts": [
+    {
+      "t": "sub-",
+      "type": "prefix",
+      "m": "under"
+    },
+    {
+      "t": "mitt",
+      "type": "root",
+      "m": "to send, place"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "transmit",
+        "h": "send across",
+        "orbitable": true
+      },
+      {
+        "w": "permit",
+        "h": "send through",
+        "orbitable": true
+      },
+      {
+        "w": "commit",
+        "h": "send together",
+        "orbitable": true
+      },
+      {
+        "w": "admit",
+        "h": "send to",
+        "orbitable": true
+      },
+      {
+        "w": "emit",
+        "h": "send out",
+        "orbitable": false
+      }
+    ],
+    "prefix": [
+      {
+        "w": "submarine",
+        "h": "under water",
+        "orbitable": true
+      },
+      {
+        "w": "subtract",
+        "h": "take under",
+        "orbitable": false
+      },
+      {
+        "w": "subdue",
+        "h": "lead under",
+        "orbitable": false
+      }
+    ],
+    "suffix": []
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

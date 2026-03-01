@@ -1,0 +1,79 @@
+{
+  "word": "deduce",
+  "ipa": "/dɪˈdus/",
+  "pos": "verb",
+  "definition": "To arrive at a conclusion by reasoning from general principles or known facts.",
+  "etymology": "Latin deducere: de- (down, away) + ducere (to lead)",
+  "parts": [
+    {
+      "t": "de-",
+      "type": "prefix",
+      "m": "down, away"
+    },
+    {
+      "t": "duc",
+      "type": "root",
+      "m": "to lead, guide"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "deduce",
+        "h": "lead away, conclude",
+        "orbitable": true
+      },
+      {
+        "w": "produce",
+        "h": "lead forward, make",
+        "orbitable": true
+      },
+      {
+        "w": "introduce",
+        "h": "lead in, present",
+        "orbitable": true
+      },
+      {
+        "w": "conduct",
+        "h": "lead with, guide",
+        "orbitable": true
+      },
+      {
+        "w": "educate",
+        "h": "lead out, teach",
+        "orbitable": true
+      },
+      {
+        "w": "seduce",
+        "h": "lead away, tempt",
+        "orbitable": false
+      }
+    ],
+    "prefix": [
+      {
+        "w": "demote",
+        "h": "move down, lower rank",
+        "orbitable": false
+      },
+      {
+        "w": "deploy",
+        "h": "unfold away, arrange",
+        "orbitable": false
+      },
+      {
+        "w": "describe",
+        "h": "write down, detail",
+        "orbitable": false
+      },
+      {
+        "w": "defend",
+        "h": "guard against, protect",
+        "orbitable": false
+      }
+    ],
+    "suffix": []
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

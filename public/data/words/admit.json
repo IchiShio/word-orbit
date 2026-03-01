@@ -1,0 +1,74 @@
+{
+  "word": "admit",
+  "ipa": "/ədˈmɪt/",
+  "pos": "verb",
+  "definition": "to allow someone to enter a place or to accept that something is true.",
+  "etymology": "Latin admittere: ad- (to) + mittere (to send)",
+  "parts": [
+    {
+      "t": "ad-",
+      "type": "prefix",
+      "m": "to, toward"
+    },
+    {
+      "t": "mitt",
+      "type": "root",
+      "m": "to send"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "transmit",
+        "h": "send across",
+        "orbitable": true
+      },
+      {
+        "w": "submit",
+        "h": "send under",
+        "orbitable": true
+      },
+      {
+        "w": "commit",
+        "h": "send together",
+        "orbitable": true
+      },
+      {
+        "w": "emit",
+        "h": "send out",
+        "orbitable": false
+      },
+      {
+        "w": "omit",
+        "h": "send away",
+        "orbitable": false
+      }
+    ],
+    "prefix": [
+      {
+        "w": "adopt",
+        "h": "take to",
+        "orbitable": false
+      },
+      {
+        "w": "advance",
+        "h": "move toward",
+        "orbitable": false
+      },
+      {
+        "w": "adventure",
+        "h": "come to",
+        "orbitable": false
+      },
+      {
+        "w": "advice",
+        "h": "see toward",
+        "orbitable": false
+      }
+    ],
+    "suffix": []
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

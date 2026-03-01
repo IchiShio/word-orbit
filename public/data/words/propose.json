@@ -1,0 +1,74 @@
+{
+  "word": "propose",
+  "ipa": "/prəˈpoʊz/",
+  "pos": "verb",
+  "definition": "to suggest or put forward an idea, plan, or person for consideration or acceptance.",
+  "etymology": "Old French proposer: pro- (forward) + poser (to place, put), influenced by Latin pro- (forward) + pausare (to pause, stop)",
+  "parts": [
+    {
+      "t": "pro-",
+      "type": "prefix",
+      "m": "forward, forth"
+    },
+    {
+      "t": "pose",
+      "type": "root",
+      "m": "to place, put, set"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "pose",
+        "h": "place, position",
+        "orbitable": true
+      },
+      {
+        "w": "compose",
+        "h": "put together",
+        "orbitable": true
+      },
+      {
+        "w": "suppose",
+        "h": "assume, think",
+        "orbitable": true
+      },
+      {
+        "w": "dispose",
+        "h": "arrange, incline",
+        "orbitable": false
+      },
+      {
+        "w": "expose",
+        "h": "lay open, reveal",
+        "orbitable": true
+      }
+    ],
+    "prefix": [
+      {
+        "w": "proceed",
+        "h": "go forward",
+        "orbitable": true
+      },
+      {
+        "w": "produce",
+        "h": "bring forth",
+        "orbitable": true
+      },
+      {
+        "w": "promote",
+        "h": "move forward",
+        "orbitable": true
+      },
+      {
+        "w": "provide",
+        "h": "supply beforehand",
+        "orbitable": false
+      }
+    ],
+    "suffix": []
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

@@ -1,0 +1,74 @@
+{
+  "word": "subscribe",
+  "ipa": "/səbˈskɹaɪb/",
+  "pos": "verb",
+  "definition": "to agree to receive or pay for a service or publication regularly, or to write one's name at the end of a document",
+  "etymology": "Latin subscribere: sub- (under) + scribere (to write)",
+  "parts": [
+    {
+      "t": "sub-",
+      "type": "prefix",
+      "m": "under"
+    },
+    {
+      "t": "scrib",
+      "type": "root",
+      "m": "to write"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "scribe",
+        "h": "write, clerk",
+        "orbitable": true
+      },
+      {
+        "w": "describe",
+        "h": "write down, tell about",
+        "orbitable": true
+      },
+      {
+        "w": "script",
+        "h": "written text",
+        "orbitable": true
+      },
+      {
+        "w": "prescribe",
+        "h": "write before, order",
+        "orbitable": true
+      },
+      {
+        "w": "inscribe",
+        "h": "write in",
+        "orbitable": false
+      }
+    ],
+    "prefix": [
+      {
+        "w": "submarine",
+        "h": "under water",
+        "orbitable": false
+      },
+      {
+        "w": "subway",
+        "h": "under way",
+        "orbitable": false
+      },
+      {
+        "w": "subdue",
+        "h": "bring under",
+        "orbitable": false
+      },
+      {
+        "w": "submit",
+        "h": "put under",
+        "orbitable": false
+      }
+    ],
+    "suffix": []
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

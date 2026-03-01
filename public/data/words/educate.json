@@ -1,0 +1,90 @@
+{
+  "word": "educate",
+  "ipa": "/ˈɛdʒukeɪt/",
+  "pos": "verb",
+  "definition": "to teach or provide schooling to someone in order to develop their knowledge and skills",
+  "etymology": "Latin educāre: e- (out) + ducāre (to lead)",
+  "parts": [
+    {
+      "t": "e-",
+      "type": "prefix",
+      "m": "out"
+    },
+    {
+      "t": "duc",
+      "type": "root",
+      "m": "to lead, draw"
+    },
+    {
+      "t": "-ate",
+      "type": "suffix",
+      "m": "to cause, make"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "deduce",
+        "h": "lead away from",
+        "orbitable": true
+      },
+      {
+        "w": "induce",
+        "h": "lead into",
+        "orbitable": true
+      },
+      {
+        "w": "produce",
+        "h": "lead forward",
+        "orbitable": false
+      },
+      {
+        "w": "conduct",
+        "h": "lead together",
+        "orbitable": false
+      },
+      {
+        "w": "aqueduct",
+        "h": "water leading",
+        "orbitable": false
+      }
+    ],
+    "prefix": [
+      {
+        "w": "eject",
+        "h": "throw out",
+        "orbitable": false
+      },
+      {
+        "w": "emit",
+        "h": "send out",
+        "orbitable": false
+      },
+      {
+        "w": "evoke",
+        "h": "call out",
+        "orbitable": false
+      }
+    ],
+    "suffix": [
+      {
+        "w": "cultivate",
+        "h": "work the land",
+        "orbitable": false
+      },
+      {
+        "w": "motivate",
+        "h": "give reason to move",
+        "orbitable": true
+      },
+      {
+        "w": "activate",
+        "h": "make active",
+        "orbitable": false
+      }
+    ]
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

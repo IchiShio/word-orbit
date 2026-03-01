@@ -1,0 +1,74 @@
+{
+  "word": "visual",
+  "ipa": "/ˈvɪʒuəl/",
+  "pos": "adjective",
+  "definition": "relating to sight or the ability to see.",
+  "etymology": "Latin visualis: visualis (of sight) from visus (sight, appearance) from videre (to see)",
+  "parts": [
+    {
+      "t": "vis-",
+      "type": "root",
+      "m": "to see"
+    },
+    {
+      "t": "-ual",
+      "type": "suffix",
+      "m": "relating to, of the nature of"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "vision",
+        "h": "act of seeing",
+        "orbitable": true
+      },
+      {
+        "w": "visible",
+        "h": "able to be seen",
+        "orbitable": true
+      },
+      {
+        "w": "visit",
+        "h": "go to see",
+        "orbitable": false
+      },
+      {
+        "w": "revise",
+        "h": "see again",
+        "orbitable": false
+      },
+      {
+        "w": "supervise",
+        "h": "oversee",
+        "orbitable": true
+      }
+    ],
+    "prefix": [],
+    "suffix": [
+      {
+        "w": "annual",
+        "h": "yearly",
+        "orbitable": false
+      },
+      {
+        "w": "actual",
+        "h": "real",
+        "orbitable": false
+      },
+      {
+        "w": "sexual",
+        "h": "relating to sex",
+        "orbitable": false
+      },
+      {
+        "w": "textual",
+        "h": "relating to text",
+        "orbitable": false
+      }
+    ]
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

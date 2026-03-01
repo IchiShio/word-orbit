@@ -1,0 +1,70 @@
+{
+  "word": "perspective",
+  "ipa": "/pɚˈspɛktɪv/",
+  "pos": "noun",
+  "definition": "A particular way of viewing things that depends on one's experience, background, or position.",
+  "etymology": "Latin perspectīva (feminine of perspectīvus): per- (through) + specere (to look, see)",
+  "parts": [
+    {
+      "t": "per-",
+      "type": "prefix",
+      "m": "through"
+    },
+    {
+      "t": "spect",
+      "type": "root",
+      "m": "to look, see"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "spectator",
+        "h": "one who watches",
+        "orbitable": true
+      },
+      {
+        "w": "inspect",
+        "h": "look into",
+        "orbitable": true
+      },
+      {
+        "w": "aspect",
+        "h": "appearance, way of looking",
+        "orbitable": true
+      },
+      {
+        "w": "respect",
+        "h": "regard, consideration",
+        "orbitable": false
+      },
+      {
+        "w": "suspect",
+        "h": "doubt, look at with suspicion",
+        "orbitable": false
+      }
+    ],
+    "prefix": [
+      {
+        "w": "permit",
+        "h": "allow through"
+      },
+      {
+        "w": "perfect",
+        "h": "complete, through and through"
+      },
+      {
+        "w": "perform",
+        "h": "carry through"
+      },
+      {
+        "w": "persuade",
+        "h": "convince thoroughly"
+      }
+    ],
+    "suffix": []
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

@@ -1,0 +1,74 @@
+{
+  "word": "transmit",
+  "ipa": "/trænzˈmɪt/",
+  "pos": "verb",
+  "definition": "to send or pass something from one place or person to another",
+  "etymology": "Latin transmittere: trans- (across) + mittere (to send)",
+  "parts": [
+    {
+      "t": "trans-",
+      "type": "prefix",
+      "m": "across"
+    },
+    {
+      "t": "mitt",
+      "type": "root",
+      "m": "to send"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "missile",
+        "h": "send, throw",
+        "orbitable": true
+      },
+      {
+        "w": "admit",
+        "h": "send toward",
+        "orbitable": true
+      },
+      {
+        "w": "emit",
+        "h": "send out",
+        "orbitable": true
+      },
+      {
+        "w": "submit",
+        "h": "send under",
+        "orbitable": true
+      },
+      {
+        "w": "commit",
+        "h": "send together",
+        "orbitable": false
+      }
+    ],
+    "prefix": [
+      {
+        "w": "transport",
+        "h": "carry across",
+        "orbitable": true
+      },
+      {
+        "w": "translate",
+        "h": "carry across",
+        "orbitable": true
+      },
+      {
+        "w": "transaction",
+        "h": "do across",
+        "orbitable": false
+      },
+      {
+        "w": "transparent",
+        "h": "show across",
+        "orbitable": false
+      }
+    ],
+    "suffix": []
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

@@ -1,0 +1,74 @@
+{
+  "word": "biodiversity",
+  "ipa": "/ˌbaɪoʊdaɪˈvɜɹsɪti/",
+  "pos": "noun",
+  "definition": "the variety of plant and animal life in a particular environment or in the world as a whole",
+  "etymology": "Greek bios (life) + Latin diversitas (difference, variety); diversitas from diversus (turned different directions)",
+  "parts": [
+    {
+      "t": "bio-",
+      "type": "prefix",
+      "m": "life"
+    },
+    {
+      "t": "diversity",
+      "type": "root",
+      "m": "variety, difference"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "diversity",
+        "h": "variety, difference",
+        "orbitable": true
+      },
+      {
+        "w": "diverse",
+        "h": "different, varied",
+        "orbitable": true
+      },
+      {
+        "w": "divert",
+        "h": "turn away, redirect",
+        "orbitable": false
+      },
+      {
+        "w": "diverge",
+        "h": "separate, go different ways",
+        "orbitable": true
+      },
+      {
+        "w": "aversion",
+        "h": "dislike, turn away from",
+        "orbitable": false
+      }
+    ],
+    "prefix": [
+      {
+        "w": "biology",
+        "h": "study of life",
+        "orbitable": true
+      },
+      {
+        "w": "biography",
+        "h": "life story",
+        "orbitable": true
+      },
+      {
+        "w": "biosphere",
+        "h": "life realm",
+        "orbitable": true
+      },
+      {
+        "w": "biochemistry",
+        "h": "chemistry of life",
+        "orbitable": false
+      }
+    ],
+    "suffix": []
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

@@ -1,0 +1,66 @@
+{
+  "word": "object",
+  "ipa": "/ˈɑbdʒɛkt/ (noun) /əbˈdʒɛkt/ (verb)",
+  "pos": "noun, verb",
+  "definition": "A physical thing that can be seen or touched; to express disagreement or opposition to something.",
+  "etymology": "Latin obiectus: ob- (against, toward) + iacere (to throw)",
+  "parts": [
+    {
+      "t": "ob-",
+      "type": "prefix",
+      "m": "against, toward"
+    },
+    {
+      "t": "ject",
+      "type": "root",
+      "m": "to throw"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "reject",
+        "h": "throw back, refuse",
+        "orbitable": true
+      },
+      {
+        "w": "project",
+        "h": "throw forward",
+        "orbitable": true
+      },
+      {
+        "w": "inject",
+        "h": "throw into",
+        "orbitable": true
+      },
+      {
+        "w": "subject",
+        "h": "throw under",
+        "orbitable": false
+      },
+      {
+        "w": "eject",
+        "h": "throw out",
+        "orbitable": true
+      }
+    ],
+    "prefix": [
+      {
+        "w": "obscure",
+        "h": "dark, unclear"
+      },
+      {
+        "w": "observe",
+        "h": "watch, notice"
+      },
+      {
+        "w": "obtain",
+        "h": "get, acquire"
+      }
+    ],
+    "suffix": []
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

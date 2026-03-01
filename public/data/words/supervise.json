@@ -1,0 +1,74 @@
+{
+  "word": "supervise",
+  "ipa": "/ˌsuːpɚˈvaɪz/",
+  "pos": "verb",
+  "definition": "To observe and direct the work or performance of a person or group.",
+  "etymology": "Latin supervidere: super- (over) + videre (to see)",
+  "parts": [
+    {
+      "t": "super-",
+      "type": "prefix",
+      "m": "over, above"
+    },
+    {
+      "t": "vis",
+      "type": "root",
+      "m": "to see"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "vision",
+        "h": "ability to see",
+        "orbitable": true
+      },
+      {
+        "w": "visible",
+        "h": "able to be seen",
+        "orbitable": true
+      },
+      {
+        "w": "video",
+        "h": "I see",
+        "orbitable": false
+      },
+      {
+        "w": "revise",
+        "h": "see again",
+        "orbitable": true
+      },
+      {
+        "w": "evident",
+        "h": "clear to see",
+        "orbitable": false
+      }
+    ],
+    "prefix": [
+      {
+        "w": "supermarket",
+        "h": "very large market",
+        "orbitable": false
+      },
+      {
+        "w": "supernatural",
+        "h": "beyond nature",
+        "orbitable": true
+      },
+      {
+        "w": "superior",
+        "h": "higher in rank",
+        "orbitable": true
+      },
+      {
+        "w": "superintendent",
+        "h": "oversee manager",
+        "orbitable": false
+      }
+    ],
+    "suffix": []
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

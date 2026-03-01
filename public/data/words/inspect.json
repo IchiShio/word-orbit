@@ -1,0 +1,79 @@
+{
+  "word": "inspect",
+  "ipa": "/ɪnˈspɛkt/",
+  "pos": "verb",
+  "definition": "To examine something carefully and thoroughly, often officially or for quality control.",
+  "etymology": "Latin inspicere: in- (into) + specere (to look, see)",
+  "parts": [
+    {
+      "t": "in-",
+      "type": "prefix",
+      "m": "into"
+    },
+    {
+      "t": "spect",
+      "type": "root",
+      "m": "to look, see"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "spectator",
+        "h": "one who sees, watches",
+        "orbitable": true
+      },
+      {
+        "w": "perspective",
+        "h": "way of seeing",
+        "orbitable": true
+      },
+      {
+        "w": "respect",
+        "h": "look back at, regard",
+        "orbitable": true
+      },
+      {
+        "w": "aspect",
+        "h": "appearance, view",
+        "orbitable": false
+      },
+      {
+        "w": "suspect",
+        "h": "look under, distrust",
+        "orbitable": false
+      },
+      {
+        "w": "spectacle",
+        "h": "impressive sight",
+        "orbitable": false
+      }
+    ],
+    "prefix": [
+      {
+        "w": "inform",
+        "h": "put into shape",
+        "orbitable": false
+      },
+      {
+        "w": "involve",
+        "h": "wrap into",
+        "orbitable": false
+      },
+      {
+        "w": "insect",
+        "h": "cut into sections",
+        "orbitable": false
+      },
+      {
+        "w": "instruct",
+        "h": "build into",
+        "orbitable": false
+      }
+    ],
+    "suffix": []
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

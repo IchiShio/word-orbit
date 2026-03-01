@@ -1,0 +1,95 @@
+{
+  "word": "television",
+  "ipa": "/ˈtɛlɪvɪʒən/",
+  "pos": "noun",
+  "definition": "An electronic device that receives and displays broadcast signals as moving images and sound, or the medium of broadcasting itself.",
+  "etymology": "Greek tele- (far, distant) + Latin vīsion- (sight, seeing)",
+  "parts": [
+    {
+      "t": "tele-",
+      "type": "prefix",
+      "m": "far, distant"
+    },
+    {
+      "t": "vis",
+      "type": "root",
+      "m": "to see"
+    },
+    {
+      "t": "-ion",
+      "type": "suffix",
+      "m": "act or condition"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "vision",
+        "h": "sight, seeing",
+        "orbitable": true
+      },
+      {
+        "w": "visible",
+        "h": "able to be seen",
+        "orbitable": true
+      },
+      {
+        "w": "visual",
+        "h": "related to sight",
+        "orbitable": true
+      },
+      {
+        "w": "revise",
+        "h": "look again",
+        "orbitable": false
+      },
+      {
+        "w": "supervise",
+        "h": "oversee, watch",
+        "orbitable": true
+      }
+    ],
+    "prefix": [
+      {
+        "w": "telephone",
+        "h": "sound from far away",
+        "orbitable": true
+      },
+      {
+        "w": "telescope",
+        "h": "see from far away",
+        "orbitable": true
+      },
+      {
+        "w": "teleport",
+        "h": "transport from distance",
+        "orbitable": false
+      },
+      {
+        "w": "telegram",
+        "h": "message from distance",
+        "orbitable": false
+      }
+    ],
+    "suffix": [
+      {
+        "w": "action",
+        "h": "act or condition",
+        "orbitable": false
+      },
+      {
+        "w": "attention",
+        "h": "state of minding",
+        "orbitable": false
+      },
+      {
+        "w": "nation",
+        "h": "large group of people",
+        "orbitable": false
+      }
+    ]
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

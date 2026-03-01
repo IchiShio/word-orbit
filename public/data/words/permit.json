@@ -1,0 +1,74 @@
+{
+  "word": "permit",
+  "ipa": "/pɚˈmɪt/ (verb) or /ˈpɚmɪt/ (noun)",
+  "pos": "verb/noun",
+  "definition": "To allow something to happen or to give official permission; a document granting authorization.",
+  "etymology": "Latin permittere: per- (through, thoroughly) + mittere (to send, let go)",
+  "parts": [
+    {
+      "t": "per-",
+      "type": "prefix",
+      "m": "through, thoroughly"
+    },
+    {
+      "t": "mitt",
+      "type": "root",
+      "m": "to send, let go"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "admit",
+        "h": "allow to enter",
+        "orbitable": true
+      },
+      {
+        "w": "commit",
+        "h": "send together, dedicate",
+        "orbitable": true
+      },
+      {
+        "w": "submit",
+        "h": "yield, give over",
+        "orbitable": true
+      },
+      {
+        "w": "transmit",
+        "h": "send across",
+        "orbitable": false
+      },
+      {
+        "w": "omit",
+        "h": "leave out",
+        "orbitable": false
+      }
+    ],
+    "prefix": [
+      {
+        "w": "perplex",
+        "h": "confuse thoroughly",
+        "orbitable": false
+      },
+      {
+        "w": "persist",
+        "h": "continue firmly",
+        "orbitable": false
+      },
+      {
+        "w": "perfect",
+        "h": "complete thoroughly",
+        "orbitable": true
+      },
+      {
+        "w": "perform",
+        "h": "carry out fully",
+        "orbitable": true
+      }
+    ],
+    "suffix": []
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

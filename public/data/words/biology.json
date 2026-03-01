@@ -1,0 +1,90 @@
+{
+  "word": "biology",
+  "ipa": "/baɪˈɑlədʒi/",
+  "pos": "noun",
+  "definition": "The scientific study of living organisms and life processes.",
+  "etymology": "Greek bios (life) + -logia (study of): bios (life) + logos (word, study)",
+  "parts": [
+    {
+      "t": "bio-",
+      "type": "prefix",
+      "m": "life"
+    },
+    {
+      "t": "log",
+      "type": "root",
+      "m": "word, study, reason"
+    },
+    {
+      "t": "-y",
+      "type": "suffix",
+      "m": "field of study, quality"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "biology",
+        "h": "study of life",
+        "orbitable": true
+      },
+      {
+        "w": "geology",
+        "h": "study of earth",
+        "orbitable": true
+      },
+      {
+        "w": "psychology",
+        "h": "study of mind",
+        "orbitable": true
+      },
+      {
+        "w": "logic",
+        "h": "reasoning, argument",
+        "orbitable": true
+      },
+      {
+        "w": "dialogue",
+        "h": "conversation between",
+        "orbitable": false
+      }
+    ],
+    "prefix": [
+      {
+        "w": "biography",
+        "h": "life story",
+        "orbitable": true
+      },
+      {
+        "w": "biodiversity",
+        "h": "variety of life",
+        "orbitable": false
+      },
+      {
+        "w": "biohazard",
+        "h": "life danger",
+        "orbitable": false
+      }
+    ],
+    "suffix": [
+      {
+        "w": "chemistry",
+        "h": "study of substances",
+        "orbitable": true
+      },
+      {
+        "w": "history",
+        "h": "study of past",
+        "orbitable": true
+      },
+      {
+        "w": "geography",
+        "h": "study of earth places",
+        "orbitable": true
+      }
+    ]
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

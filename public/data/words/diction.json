@@ -1,0 +1,79 @@
+{
+  "word": "diction",
+  "ipa": "/ˈdɪkʃən/",
+  "pos": "noun",
+  "definition": "The choice and use of words in speech or writing; style of expression.",
+  "etymology": "Latin dictio: dicere (to say, speak) + -tion (act or result of)",
+  "parts": [
+    {
+      "t": "dict",
+      "type": "root",
+      "m": "to say, speak"
+    },
+    {
+      "t": "-ion",
+      "type": "suffix",
+      "m": "act or result of"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "dictate",
+        "h": "say aloud, command",
+        "orbitable": true
+      },
+      {
+        "w": "dictionary",
+        "h": "book of words",
+        "orbitable": true
+      },
+      {
+        "w": "predict",
+        "h": "say before",
+        "orbitable": true
+      },
+      {
+        "w": "verdict",
+        "h": "say truth",
+        "orbitable": false
+      },
+      {
+        "w": "contradict",
+        "h": "say against",
+        "orbitable": false
+      },
+      {
+        "w": "benediction",
+        "h": "good saying",
+        "orbitable": false
+      }
+    ],
+    "prefix": [],
+    "suffix": [
+      {
+        "w": "action",
+        "h": "act of doing",
+        "orbitable": false
+      },
+      {
+        "w": "station",
+        "h": "place of standing",
+        "orbitable": false
+      },
+      {
+        "w": "nation",
+        "h": "group of born people",
+        "orbitable": false
+      },
+      {
+        "w": "creation",
+        "h": "act of making",
+        "orbitable": false
+      }
+    ]
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

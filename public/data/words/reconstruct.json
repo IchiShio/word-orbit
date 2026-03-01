@@ -1,0 +1,79 @@
+{
+  "word": "reconstruct",
+  "ipa": "/ˌɹiːkənˈstɹʌkt/",
+  "pos": "verb",
+  "definition": "To build, assemble, or create something again, especially based on remaining pieces or information.",
+  "etymology": "Latin reconstructus: re- (again) + construere (to build, construct)",
+  "parts": [
+    {
+      "t": "re-",
+      "type": "prefix",
+      "m": "again"
+    },
+    {
+      "t": "construct",
+      "type": "root",
+      "m": "to build"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "construct",
+        "h": "build together",
+        "orbitable": true
+      },
+      {
+        "w": "structure",
+        "h": "how something is built",
+        "orbitable": true
+      },
+      {
+        "w": "instruct",
+        "h": "build knowledge in",
+        "orbitable": false
+      },
+      {
+        "w": "obstruct",
+        "h": "build against",
+        "orbitable": false
+      },
+      {
+        "w": "destruction",
+        "h": "tearing down",
+        "orbitable": true
+      }
+    ],
+    "prefix": [
+      {
+        "w": "rebuild",
+        "h": "build again",
+        "orbitable": true
+      },
+      {
+        "w": "redo",
+        "h": "do again",
+        "orbitable": false
+      },
+      {
+        "w": "rethink",
+        "h": "think again",
+        "orbitable": false
+      },
+      {
+        "w": "reconsider",
+        "h": "consider again",
+        "orbitable": false
+      },
+      {
+        "w": "revisit",
+        "h": "visit again",
+        "orbitable": false
+      }
+    ],
+    "suffix": []
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

@@ -1,0 +1,74 @@
+{
+  "word": "spectator",
+  "ipa": "/spɛkˈteɪtər/",
+  "pos": "noun",
+  "definition": "A person who watches a show, game, or other event.",
+  "etymology": "Latin spectātor: spectāre (to watch, look at) + -tor (agent suffix, one who)",
+  "parts": [
+    {
+      "t": "spect",
+      "type": "root",
+      "m": "to watch, look"
+    },
+    {
+      "t": "-ator",
+      "type": "suffix",
+      "m": "one who does"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "spectacle",
+        "h": "thing to watch",
+        "orbitable": true
+      },
+      {
+        "w": "inspect",
+        "h": "look into",
+        "orbitable": true
+      },
+      {
+        "w": "respect",
+        "h": "look back at",
+        "orbitable": false
+      },
+      {
+        "w": "prospect",
+        "h": "look forward",
+        "orbitable": false
+      },
+      {
+        "w": "aspect",
+        "h": "appearance, view",
+        "orbitable": false
+      }
+    ],
+    "prefix": [],
+    "suffix": [
+      {
+        "w": "creator",
+        "h": "one who creates",
+        "orbitable": true
+      },
+      {
+        "w": "operator",
+        "h": "one who operates",
+        "orbitable": true
+      },
+      {
+        "w": "generator",
+        "h": "one who generates",
+        "orbitable": false
+      },
+      {
+        "w": "narrator",
+        "h": "one who narrates",
+        "orbitable": false
+      }
+    ]
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

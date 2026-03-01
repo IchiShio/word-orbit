@@ -1,0 +1,69 @@
+{
+  "word": "diagram",
+  "ipa": "/ˈdaɪəɡræm/",
+  "pos": "noun",
+  "definition": "A simplified visual representation of something that shows its structure, relationships, or operation.",
+  "etymology": "Greek dia- (through, across) + -gram (something written or drawn)",
+  "parts": [
+    {
+      "t": "dia-",
+      "type": "prefix",
+      "m": "through, across"
+    },
+    {
+      "t": "gram",
+      "type": "root",
+      "m": "to write, draw"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "grammar",
+        "h": "writing rules",
+        "orbitable": true
+      },
+      {
+        "w": "telegram",
+        "h": "message sent across",
+        "orbitable": true
+      },
+      {
+        "w": "monogram",
+        "h": "one name written",
+        "orbitable": false
+      },
+      {
+        "w": "photograph",
+        "h": "light writing",
+        "orbitable": false
+      },
+      {
+        "w": "anagram",
+        "h": "letters rearranged",
+        "orbitable": false
+      }
+    ],
+    "prefix": [
+      {
+        "w": "dialogue",
+        "h": "conversation across",
+        "orbitable": true
+      },
+      {
+        "w": "diagonal",
+        "h": "angle across",
+        "orbitable": false
+      },
+      {
+        "w": "diameter",
+        "h": "distance across",
+        "orbitable": true
+      }
+    ],
+    "suffix": []
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

@@ -1,0 +1,74 @@
+{
+  "word": "edict",
+  "ipa": "/ˈɛdɪkt/",
+  "pos": "noun",
+  "definition": "An official order or decree issued by a person in authority.",
+  "etymology": "Latin edictum: e- (out) + dicere (to say)",
+  "parts": [
+    {
+      "t": "e-",
+      "type": "prefix",
+      "m": "out"
+    },
+    {
+      "t": "dict",
+      "type": "root",
+      "m": "to say, speak"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "dictate",
+        "h": "say aloud",
+        "orbitable": true
+      },
+      {
+        "w": "dictator",
+        "h": "one who speaks commands",
+        "orbitable": true
+      },
+      {
+        "w": "predict",
+        "h": "say beforehand",
+        "orbitable": false
+      },
+      {
+        "w": "verdict",
+        "h": "truth spoken",
+        "orbitable": false
+      },
+      {
+        "w": "contradict",
+        "h": "speak against",
+        "orbitable": false
+      },
+      {
+        "w": "dictionary",
+        "h": "collection of words",
+        "orbitable": false
+      }
+    ],
+    "prefix": [
+      {
+        "w": "eject",
+        "h": "throw out",
+        "orbitable": false
+      },
+      {
+        "w": "elect",
+        "h": "choose out",
+        "orbitable": false
+      },
+      {
+        "w": "emerge",
+        "h": "come out",
+        "orbitable": false
+      }
+    ],
+    "suffix": []
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

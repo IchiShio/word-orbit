@@ -1,0 +1,74 @@
+{
+  "word": "impose",
+  "ipa": "/ɪmˈpoʊz/",
+  "pos": "verb",
+  "definition": "to force someone to accept or comply with something, or to place something on a surface or person.",
+  "etymology": "Latin imponere: im- (on, into) + ponere (to place, put)",
+  "parts": [
+    {
+      "t": "im-",
+      "type": "prefix",
+      "m": "on, into"
+    },
+    {
+      "t": "pose",
+      "type": "root",
+      "m": "to place, put"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "position",
+        "h": "place, put",
+        "orbitable": true
+      },
+      {
+        "w": "propose",
+        "h": "put forward",
+        "orbitable": true
+      },
+      {
+        "w": "dispose",
+        "h": "arrange, put away",
+        "orbitable": false
+      },
+      {
+        "w": "compose",
+        "h": "put together",
+        "orbitable": true
+      },
+      {
+        "w": "suppose",
+        "h": "put under, assume",
+        "orbitable": true
+      }
+    ],
+    "prefix": [
+      {
+        "w": "import",
+        "h": "bring in",
+        "orbitable": true
+      },
+      {
+        "w": "impress",
+        "h": "press into",
+        "orbitable": false
+      },
+      {
+        "w": "improve",
+        "h": "make better",
+        "orbitable": false
+      },
+      {
+        "w": "impair",
+        "h": "damage",
+        "orbitable": false
+      }
+    ],
+    "suffix": []
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

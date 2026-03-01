@@ -1,0 +1,85 @@
+{
+  "word": "biome",
+  "ipa": "/baɪˈoʊm/",
+  "pos": "noun",
+  "definition": "A large geographic region with distinct climate, vegetation, and animal life.",
+  "etymology": "Greek bios (life) + -ome (suffix denoting a collection or group)",
+  "parts": [
+    {
+      "t": "bio-",
+      "type": "prefix",
+      "m": "life"
+    },
+    {
+      "t": "ome",
+      "type": "suffix",
+      "m": "collection, group"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "biology",
+        "h": "study of life",
+        "orbitable": true
+      },
+      {
+        "w": "biography",
+        "h": "life story",
+        "orbitable": true
+      },
+      {
+        "w": "biopsy",
+        "h": "life sample",
+        "orbitable": true
+      },
+      {
+        "w": "biochemistry",
+        "h": "life chemistry",
+        "orbitable": false
+      },
+      {
+        "w": "bioethics",
+        "h": "life morality",
+        "orbitable": false
+      }
+    ],
+    "prefix": [
+      {
+        "w": "biodiversity",
+        "h": "life variety",
+        "orbitable": true
+      },
+      {
+        "w": "biotech",
+        "h": "life technology",
+        "orbitable": false
+      },
+      {
+        "w": "biofuel",
+        "h": "life fuel",
+        "orbitable": false
+      }
+    ],
+    "suffix": [
+      {
+        "w": "genome",
+        "h": "gene collection",
+        "orbitable": true
+      },
+      {
+        "w": "proteome",
+        "h": "protein collection",
+        "orbitable": false
+      },
+      {
+        "w": "microbiome",
+        "h": "small life collection",
+        "orbitable": true
+      }
+    ]
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

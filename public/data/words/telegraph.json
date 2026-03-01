@@ -1,0 +1,74 @@
+{
+  "word": "telegraph",
+  "ipa": "/ˈtɛləɡræf/",
+  "pos": "noun, verb",
+  "definition": "A system or device for sending messages over long distances using electrical signals, or to send a message by this means.",
+  "etymology": "Greek tele- (far, distant) + graphia (writing), from graphein (to write); literally 'writing from afar'",
+  "parts": [
+    {
+      "t": "tele-",
+      "type": "prefix",
+      "m": "far, distant"
+    },
+    {
+      "t": "graph",
+      "type": "root",
+      "m": "to write, draw"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "photograph",
+        "h": "light writing",
+        "orbitable": true
+      },
+      {
+        "w": "graphic",
+        "h": "relating to writing",
+        "orbitable": true
+      },
+      {
+        "w": "paragraph",
+        "h": "side writing",
+        "orbitable": false
+      },
+      {
+        "w": "autograph",
+        "h": "self writing",
+        "orbitable": false
+      },
+      {
+        "w": "graphite",
+        "h": "writing material",
+        "orbitable": false
+      }
+    ],
+    "prefix": [
+      {
+        "w": "telephone",
+        "h": "distant sound",
+        "orbitable": true
+      },
+      {
+        "w": "television",
+        "h": "distant vision",
+        "orbitable": true
+      },
+      {
+        "w": "telescope",
+        "h": "distant viewing",
+        "orbitable": false
+      },
+      {
+        "w": "telepath",
+        "h": "distant feeling",
+        "orbitable": false
+      }
+    ],
+    "suffix": []
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

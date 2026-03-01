@@ -1,0 +1,74 @@
+{
+  "word": "deport",
+  "ipa": "/dɪˈpɔɹt/",
+  "pos": "verb",
+  "definition": "To force someone to leave a country and return to their country of origin.",
+  "etymology": "Latin deportāre: de- (away) + portāre (to carry)",
+  "parts": [
+    {
+      "t": "de-",
+      "type": "prefix",
+      "m": "away, down"
+    },
+    {
+      "t": "port",
+      "type": "root",
+      "m": "to carry"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "portable",
+        "h": "able to carry",
+        "orbitable": true
+      },
+      {
+        "w": "transport",
+        "h": "carry across",
+        "orbitable": true
+      },
+      {
+        "w": "import",
+        "h": "bring in",
+        "orbitable": true
+      },
+      {
+        "w": "export",
+        "h": "carry out",
+        "orbitable": true
+      },
+      {
+        "w": "report",
+        "h": "carry back",
+        "orbitable": false
+      }
+    ],
+    "prefix": [
+      {
+        "w": "detach",
+        "h": "separate away",
+        "orbitable": false
+      },
+      {
+        "w": "debate",
+        "h": "argue against",
+        "orbitable": false
+      },
+      {
+        "w": "deploy",
+        "h": "position away",
+        "orbitable": false
+      },
+      {
+        "w": "demand",
+        "h": "ask away",
+        "orbitable": false
+      }
+    ],
+    "suffix": []
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

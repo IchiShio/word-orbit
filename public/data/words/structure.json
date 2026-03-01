@@ -1,0 +1,74 @@
+{
+  "word": "structure",
+  "ipa": "/ˈstrʌktʃɚ/",
+  "pos": "noun, verb",
+  "definition": "The arrangement of parts that compose something, or to arrange something in an organized way.",
+  "etymology": "Latin structūra: struere (to build, arrange) + -ūra (act or result of)",
+  "parts": [
+    {
+      "t": "struct",
+      "type": "root",
+      "m": "to build, arrange"
+    },
+    {
+      "t": "-ure",
+      "type": "suffix",
+      "m": "act or result of"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "construct",
+        "h": "build together",
+        "orbitable": true
+      },
+      {
+        "w": "instruct",
+        "h": "build in, teach",
+        "orbitable": true
+      },
+      {
+        "w": "instruct",
+        "h": "build in, teach",
+        "orbitable": true
+      },
+      {
+        "w": "obstruct",
+        "h": "build against, block",
+        "orbitable": true
+      },
+      {
+        "w": "destruct",
+        "h": "tear down",
+        "orbitable": false
+      }
+    ],
+    "prefix": [],
+    "suffix": [
+      {
+        "w": "closure",
+        "h": "act of closing",
+        "orbitable": false
+      },
+      {
+        "w": "exposure",
+        "h": "state of being exposed",
+        "orbitable": false
+      },
+      {
+        "w": "departure",
+        "h": "act of leaving",
+        "orbitable": false
+      },
+      {
+        "w": "furniture",
+        "h": "arrangement of items",
+        "orbitable": false
+      }
+    ]
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

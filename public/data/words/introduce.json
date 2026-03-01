@@ -1,0 +1,69 @@
+{
+  "word": "introduce",
+  "ipa": "/ˌɪn.trəˈdjuːs/",
+  "pos": "verb",
+  "definition": "to present someone to another person or to bring something into use or discussion for the first time.",
+  "etymology": "Latin introducere: intro- (inward, in) + ducere (to lead)",
+  "parts": [
+    {
+      "t": "intro-",
+      "type": "prefix",
+      "m": "inward, in"
+    },
+    {
+      "t": "duce",
+      "type": "root",
+      "m": "to lead, guide"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "conduct",
+        "h": "lead together",
+        "orbitable": true
+      },
+      {
+        "w": "produce",
+        "h": "lead forward",
+        "orbitable": true
+      },
+      {
+        "w": "reduce",
+        "h": "lead back",
+        "orbitable": true
+      },
+      {
+        "w": "deduce",
+        "h": "lead from",
+        "orbitable": false
+      },
+      {
+        "w": "seduce",
+        "h": "lead aside",
+        "orbitable": false
+      }
+    ],
+    "prefix": [
+      {
+        "w": "introverted",
+        "h": "turned inward",
+        "orbitable": true
+      },
+      {
+        "w": "intrude",
+        "h": "push in",
+        "orbitable": false
+      },
+      {
+        "w": "introvert",
+        "h": "inner-focused person",
+        "orbitable": true
+      }
+    ],
+    "suffix": []
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

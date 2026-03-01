@@ -1,0 +1,74 @@
+{
+  "word": "reduce",
+  "ipa": "/rɪˈdjuːs/",
+  "pos": "verb",
+  "definition": "To make something smaller in size, amount, degree, or intensity.",
+  "etymology": "Latin reducere: re- (back) + ducere (to lead, bring)",
+  "parts": [
+    {
+      "t": "re-",
+      "type": "prefix",
+      "m": "back, again"
+    },
+    {
+      "t": "duce",
+      "type": "root",
+      "m": "to lead, bring"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "produce",
+        "h": "bring forward",
+        "orbitable": true
+      },
+      {
+        "w": "introduce",
+        "h": "lead in",
+        "orbitable": true
+      },
+      {
+        "w": "conduct",
+        "h": "lead together",
+        "orbitable": true
+      },
+      {
+        "w": "deduce",
+        "h": "lead from",
+        "orbitable": false
+      },
+      {
+        "w": "seduce",
+        "h": "lead astray",
+        "orbitable": false
+      }
+    ],
+    "prefix": [
+      {
+        "w": "return",
+        "h": "come back",
+        "orbitable": true
+      },
+      {
+        "w": "rebuild",
+        "h": "build again",
+        "orbitable": false
+      },
+      {
+        "w": "rethink",
+        "h": "think again",
+        "orbitable": false
+      },
+      {
+        "w": "rewrite",
+        "h": "write again",
+        "orbitable": false
+      }
+    ],
+    "suffix": []
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

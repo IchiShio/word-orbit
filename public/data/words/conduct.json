@@ -1,0 +1,74 @@
+{
+  "word": "conduct",
+  "ipa": "/ˈkɑːndʌkt/ (noun), /kənˈdʌkt/ (verb)",
+  "pos": "noun, verb",
+  "definition": "Behavior or actions; to lead, guide, or manage an activity or organization.",
+  "etymology": "Latin conducere: con- (together) + ducere (to lead)",
+  "parts": [
+    {
+      "t": "con-",
+      "type": "prefix",
+      "m": "together"
+    },
+    {
+      "t": "duct",
+      "type": "root",
+      "m": "to lead, guide"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "duct",
+        "h": "tube that leads",
+        "orbitable": false
+      },
+      {
+        "w": "aqueduct",
+        "h": "water channel",
+        "orbitable": true
+      },
+      {
+        "w": "deduct",
+        "h": "lead away",
+        "orbitable": true
+      },
+      {
+        "w": "induce",
+        "h": "lead into",
+        "orbitable": true
+      },
+      {
+        "w": "conductor",
+        "h": "one who leads",
+        "orbitable": true
+      }
+    ],
+    "prefix": [
+      {
+        "w": "concur",
+        "h": "happen together",
+        "orbitable": false
+      },
+      {
+        "w": "confirm",
+        "h": "make firm together",
+        "orbitable": false
+      },
+      {
+        "w": "connect",
+        "h": "join together",
+        "orbitable": true
+      },
+      {
+        "w": "contribute",
+        "h": "give together",
+        "orbitable": true
+      }
+    ],
+    "suffix": []
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

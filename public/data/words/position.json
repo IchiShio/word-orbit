@@ -1,0 +1,66 @@
+{
+  "word": "position",
+  "ipa": "/pəˈzɪʃən/",
+  "pos": "noun",
+  "definition": "A place, location, or the way something is arranged or situated.",
+  "etymology": "Latin positio: ponere (to place, put) + -tion (noun suffix)",
+  "parts": [
+    {
+      "t": "posit",
+      "type": "root",
+      "m": "to place, put"
+    },
+    {
+      "t": "-ion",
+      "type": "suffix",
+      "m": "act, state, result"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "posture",
+        "h": "way body is placed",
+        "orbitable": true
+      },
+      {
+        "w": "positive",
+        "h": "firmly placed",
+        "orbitable": true
+      },
+      {
+        "w": "deposit",
+        "h": "place down",
+        "orbitable": true
+      },
+      {
+        "w": "compose",
+        "h": "put together",
+        "orbitable": false
+      },
+      {
+        "w": "impose",
+        "h": "place upon",
+        "orbitable": false
+      }
+    ],
+    "prefix": [],
+    "suffix": [
+      {
+        "w": "action",
+        "h": "doing, act"
+      },
+      {
+        "w": "station",
+        "h": "place, standing spot"
+      },
+      {
+        "w": "nation",
+        "h": "place of people"
+      }
+    ]
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

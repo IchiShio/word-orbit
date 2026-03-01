@@ -1,0 +1,74 @@
+{
+  "word": "inject",
+  "ipa": "/ɪnˈdʒɛkt/",
+  "pos": "verb",
+  "definition": "to force a liquid substance into something using a syringe or similar device, or to introduce an idea or element into a situation.",
+  "etymology": "Latin injectus: in- (into) + jacere (to throw)",
+  "parts": [
+    {
+      "t": "in-",
+      "type": "prefix",
+      "m": "into"
+    },
+    {
+      "t": "ject",
+      "type": "root",
+      "m": "to throw"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "reject",
+        "h": "throw back",
+        "orbitable": true
+      },
+      {
+        "w": "project",
+        "h": "throw forward",
+        "orbitable": true
+      },
+      {
+        "w": "eject",
+        "h": "throw out",
+        "orbitable": true
+      },
+      {
+        "w": "subject",
+        "h": "throw under",
+        "orbitable": false
+      },
+      {
+        "w": "trajectory",
+        "h": "path of throw",
+        "orbitable": false
+      }
+    ],
+    "prefix": [
+      {
+        "w": "insert",
+        "h": "put into",
+        "orbitable": false
+      },
+      {
+        "w": "inside",
+        "h": "in the middle",
+        "orbitable": false
+      },
+      {
+        "w": "income",
+        "h": "money in",
+        "orbitable": false
+      },
+      {
+        "w": "involve",
+        "h": "wrap in",
+        "orbitable": false
+      }
+    ],
+    "suffix": []
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

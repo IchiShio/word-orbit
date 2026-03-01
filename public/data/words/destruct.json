@@ -1,0 +1,74 @@
+{
+  "word": "destruct",
+  "ipa": "/dɪˈstrʌkt/",
+  "pos": "verb",
+  "definition": "to destroy or cause something to cease functioning, often deliberately or in a controlled manner.",
+  "etymology": "Latin destructus: de- (down, apart) + struere (to build, construct)",
+  "parts": [
+    {
+      "t": "de-",
+      "type": "prefix",
+      "m": "down, apart"
+    },
+    {
+      "t": "struct",
+      "type": "root",
+      "m": "to build, construct"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "construct",
+        "h": "build together",
+        "orbitable": true
+      },
+      {
+        "w": "structure",
+        "h": "arrangement, framework",
+        "orbitable": true
+      },
+      {
+        "w": "instruct",
+        "h": "build knowledge in",
+        "orbitable": true
+      },
+      {
+        "w": "obstruct",
+        "h": "block, hinder",
+        "orbitable": false
+      },
+      {
+        "w": "infrastructure",
+        "h": "basic systems and facilities",
+        "orbitable": false
+      }
+    ],
+    "prefix": [
+      {
+        "w": "defrost",
+        "h": "remove frost from",
+        "orbitable": false
+      },
+      {
+        "w": "decode",
+        "h": "convert coded message",
+        "orbitable": false
+      },
+      {
+        "w": "decrease",
+        "h": "make smaller",
+        "orbitable": false
+      },
+      {
+        "w": "depress",
+        "h": "push down, sadden",
+        "orbitable": false
+      }
+    ],
+    "suffix": []
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

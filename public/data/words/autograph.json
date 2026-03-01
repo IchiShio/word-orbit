@@ -1,0 +1,74 @@
+{
+  "word": "autograph",
+  "ipa": "/ˈɔːtəɡræf/",
+  "pos": "noun, verb",
+  "definition": "A person's own signature, or to write one's signature on something.",
+  "etymology": "Greek autos (self) + graphia (writing): autos (self) + graphein (to write)",
+  "parts": [
+    {
+      "t": "auto-",
+      "type": "prefix",
+      "m": "self"
+    },
+    {
+      "t": "graph",
+      "type": "root",
+      "m": "to write"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "graphic",
+        "h": "written, visual",
+        "orbitable": true
+      },
+      {
+        "w": "photograph",
+        "h": "light writing",
+        "orbitable": true
+      },
+      {
+        "w": "biography",
+        "h": "life writing",
+        "orbitable": true
+      },
+      {
+        "w": "paragraph",
+        "h": "written section",
+        "orbitable": false
+      },
+      {
+        "w": "graph",
+        "h": "written diagram",
+        "orbitable": false
+      }
+    ],
+    "prefix": [
+      {
+        "w": "automatic",
+        "h": "self acting",
+        "orbitable": true
+      },
+      {
+        "w": "automobile",
+        "h": "self moving",
+        "orbitable": true
+      },
+      {
+        "w": "autonomy",
+        "h": "self rule",
+        "orbitable": false
+      },
+      {
+        "w": "autopsy",
+        "h": "self seeing",
+        "orbitable": false
+      }
+    ],
+    "suffix": []
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

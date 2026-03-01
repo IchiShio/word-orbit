@@ -1,0 +1,74 @@
+{
+  "word": "project",
+  "ipa": "/ˈprɑːdʒɛkt/ (noun) or /prəˈdʒɛkt/ (verb)",
+  "pos": "noun/verb",
+  "definition": "A planned undertaking or task, or to extend outward and make something known widely.",
+  "etymology": "Latin proicere: pro- (forward) + iacere (to throw)",
+  "parts": [
+    {
+      "t": "pro-",
+      "type": "prefix",
+      "m": "forward, before"
+    },
+    {
+      "t": "ject",
+      "type": "root",
+      "m": "to throw, cast"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "reject",
+        "h": "throw back",
+        "orbitable": true
+      },
+      {
+        "w": "inject",
+        "h": "throw in",
+        "orbitable": true
+      },
+      {
+        "w": "eject",
+        "h": "throw out",
+        "orbitable": true
+      },
+      {
+        "w": "trajectory",
+        "h": "path of throw",
+        "orbitable": false
+      },
+      {
+        "w": "objective",
+        "h": "goal to throw toward",
+        "orbitable": false
+      }
+    ],
+    "prefix": [
+      {
+        "w": "proceed",
+        "h": "go forward",
+        "orbitable": true
+      },
+      {
+        "w": "promote",
+        "h": "move forward",
+        "orbitable": true
+      },
+      {
+        "w": "propose",
+        "h": "suggest before",
+        "orbitable": false
+      },
+      {
+        "w": "protect",
+        "h": "guard before",
+        "orbitable": false
+      }
+    ],
+    "suffix": []
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

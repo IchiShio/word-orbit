@@ -1,0 +1,53 @@
+{
+  "word": "verdict",
+  "ipa": "/ˈvɜɹdɪkt/",
+  "pos": "noun",
+  "definition": "A decision or judgment made by a jury or judge in a legal case, or an opinion formed after considering evidence.",
+  "etymology": "Latin vēre dictum: vēre (truly) + dictum (said, spoken), literally 'truly said'",
+  "parts": [
+    {
+      "t": "vere-",
+      "type": "prefix",
+      "m": "truly"
+    },
+    {
+      "t": "dict",
+      "type": "root",
+      "m": "to say, speak"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "dictate",
+        "h": "say with authority",
+        "orbitable": true
+      },
+      {
+        "w": "predict",
+        "h": "say beforehand",
+        "orbitable": true
+      },
+      {
+        "w": "dictionary",
+        "h": "collection of words",
+        "orbitable": true
+      },
+      {
+        "w": "contradict",
+        "h": "say against",
+        "orbitable": false
+      },
+      {
+        "w": "dictation",
+        "h": "act of speaking aloud",
+        "orbitable": false
+      }
+    ],
+    "prefix": [],
+    "suffix": []
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

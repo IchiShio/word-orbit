@@ -1,0 +1,74 @@
+{
+  "word": "portable",
+  "ipa": "/ˈpɔɹtəbəl/",
+  "pos": "adjective",
+  "definition": "Able to be easily carried or moved from one place to another.",
+  "etymology": "Latin portabilis: portare (to carry) + -abilis (capable of being)",
+  "parts": [
+    {
+      "t": "port",
+      "type": "root",
+      "m": "to carry"
+    },
+    {
+      "t": "-able",
+      "type": "suffix",
+      "m": "capable of being"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "import",
+        "h": "carry in",
+        "orbitable": true
+      },
+      {
+        "w": "export",
+        "h": "carry out",
+        "orbitable": true
+      },
+      {
+        "w": "transport",
+        "h": "carry across",
+        "orbitable": true
+      },
+      {
+        "w": "report",
+        "h": "carry back",
+        "orbitable": false
+      },
+      {
+        "w": "porter",
+        "h": "one who carries",
+        "orbitable": false
+      }
+    ],
+    "prefix": [],
+    "suffix": [
+      {
+        "w": "comfortable",
+        "h": "able to comfort",
+        "orbitable": true
+      },
+      {
+        "w": "readable",
+        "h": "able to read",
+        "orbitable": true
+      },
+      {
+        "w": "available",
+        "h": "able to avail",
+        "orbitable": false
+      },
+      {
+        "w": "printable",
+        "h": "able to print",
+        "orbitable": false
+      }
+    ]
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

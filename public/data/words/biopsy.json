@@ -1,0 +1,59 @@
+{
+  "word": "biopsy",
+  "ipa": "/ˈbaɪɒpsi/",
+  "pos": "noun",
+  "definition": "A medical procedure in which a small sample of tissue is taken from the body for examination under a microscope to diagnose disease.",
+  "etymology": "Greek bio- (life) + -opsy (viewing, examination), from bios (life) + opsesthai (to see)",
+  "parts": [
+    {
+      "t": "bio-",
+      "type": "prefix",
+      "m": "life"
+    },
+    {
+      "t": "opsy",
+      "type": "suffix",
+      "m": "examination, viewing"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "biology",
+        "h": "study of life",
+        "orbitable": true
+      },
+      {
+        "w": "biography",
+        "h": "life story",
+        "orbitable": true
+      },
+      {
+        "w": "biotic",
+        "h": "relating to life",
+        "orbitable": false
+      },
+      {
+        "w": "antibiotic",
+        "h": "against life organisms",
+        "orbitable": true
+      }
+    ],
+    "prefix": [],
+    "suffix": [
+      {
+        "w": "autopsy",
+        "h": "self examination",
+        "orbitable": false
+      },
+      {
+        "w": "endoscopy",
+        "h": "inside viewing",
+        "orbitable": false
+      }
+    ]
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

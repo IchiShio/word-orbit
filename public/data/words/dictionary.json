@@ -1,0 +1,74 @@
+{
+  "word": "dictionary",
+  "ipa": "/ˈdɪkʃəneri/",
+  "pos": "noun",
+  "definition": "A reference book containing words listed alphabetically with their meanings, pronunciations, and other information.",
+  "etymology": "Late Latin dictionarium: from Latin dictio (word, saying) + -arium (collection)",
+  "parts": [
+    {
+      "t": "dict",
+      "type": "root",
+      "m": "to say, speak"
+    },
+    {
+      "t": "-ary",
+      "type": "suffix",
+      "m": "relating to, collection of"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "dictate",
+        "h": "say aloud",
+        "orbitable": true
+      },
+      {
+        "w": "diction",
+        "h": "choice of words",
+        "orbitable": true
+      },
+      {
+        "w": "verdict",
+        "h": "truth said",
+        "orbitable": false
+      },
+      {
+        "w": "predict",
+        "h": "say beforehand",
+        "orbitable": true
+      },
+      {
+        "w": "contradict",
+        "h": "speak against",
+        "orbitable": false
+      }
+    ],
+    "prefix": [],
+    "suffix": [
+      {
+        "w": "library",
+        "h": "collection of books",
+        "orbitable": true
+      },
+      {
+        "w": "primary",
+        "h": "first in order",
+        "orbitable": false
+      },
+      {
+        "w": "ordinary",
+        "h": "common, usual",
+        "orbitable": false
+      },
+      {
+        "w": "secondary",
+        "h": "second in importance",
+        "orbitable": false
+      }
+    ]
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

@@ -1,0 +1,74 @@
+{
+  "word": "expose",
+  "ipa": "/ɪkˈspoʊz/",
+  "pos": "verb",
+  "definition": "to reveal or make visible something that was hidden or secret.",
+  "etymology": "Latin exponere: ex- (out) + ponere (to place, put)",
+  "parts": [
+    {
+      "t": "ex-",
+      "type": "prefix",
+      "m": "out, away"
+    },
+    {
+      "t": "pos",
+      "type": "root",
+      "m": "to place, put"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "position",
+        "h": "place, location",
+        "orbitable": true
+      },
+      {
+        "w": "possible",
+        "h": "can be placed",
+        "orbitable": true
+      },
+      {
+        "w": "compose",
+        "h": "put together",
+        "orbitable": false
+      },
+      {
+        "w": "propose",
+        "h": "put forward",
+        "orbitable": false
+      },
+      {
+        "w": "deposit",
+        "h": "place down",
+        "orbitable": false
+      }
+    ],
+    "prefix": [
+      {
+        "w": "export",
+        "h": "send out",
+        "orbitable": true
+      },
+      {
+        "w": "extend",
+        "h": "stretch out",
+        "orbitable": true
+      },
+      {
+        "w": "extract",
+        "h": "pull out",
+        "orbitable": false
+      },
+      {
+        "w": "exchange",
+        "h": "give out and receive",
+        "orbitable": false
+      }
+    ],
+    "suffix": []
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

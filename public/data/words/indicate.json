@@ -1,0 +1,90 @@
+{
+  "word": "indicate",
+  "ipa": "/ˈɪndɪkeɪt/",
+  "pos": "verb",
+  "definition": "To point out, show, or suggest something indirectly or directly.",
+  "etymology": "Latin indicāre: in- (in, into) + dicāre (to make known, declare)",
+  "parts": [
+    {
+      "t": "in-",
+      "type": "prefix",
+      "m": "in, into"
+    },
+    {
+      "t": "dic",
+      "type": "root",
+      "m": "to say, make known"
+    },
+    {
+      "t": "-ate",
+      "type": "suffix",
+      "m": "verb ending"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "dictate",
+        "h": "say aloud, command",
+        "orbitable": true
+      },
+      {
+        "w": "verdict",
+        "h": "say truth, judgment",
+        "orbitable": true
+      },
+      {
+        "w": "predict",
+        "h": "say before, foretell",
+        "orbitable": true
+      },
+      {
+        "w": "dictionary",
+        "h": "collection of words",
+        "orbitable": false
+      },
+      {
+        "w": "edict",
+        "h": "say out, decree",
+        "orbitable": false
+      }
+    ],
+    "prefix": [
+      {
+        "w": "include",
+        "h": "contain within",
+        "orbitable": true
+      },
+      {
+        "w": "indoor",
+        "h": "inside building",
+        "orbitable": false
+      },
+      {
+        "w": "infield",
+        "h": "inner field area",
+        "orbitable": false
+      }
+    ],
+    "suffix": [
+      {
+        "w": "educate",
+        "h": "teach, develop",
+        "orbitable": true
+      },
+      {
+        "w": "activate",
+        "h": "make active",
+        "orbitable": true
+      },
+      {
+        "w": "navigate",
+        "h": "find way through",
+        "orbitable": false
+      }
+    ]
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

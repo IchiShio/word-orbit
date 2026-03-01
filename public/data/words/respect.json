@@ -1,0 +1,74 @@
+{
+  "word": "respect",
+  "ipa": "/rɪˈspɛkt/",
+  "pos": "verb, noun",
+  "definition": "to regard with admiration, esteem, or deference; or consideration and appreciation for someone or something.",
+  "etymology": "Latin respectus: re- (back) + specere (to look, regard)",
+  "parts": [
+    {
+      "t": "re-",
+      "type": "prefix",
+      "m": "back, again"
+    },
+    {
+      "t": "spect",
+      "type": "root",
+      "m": "to look, regard"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "inspect",
+        "h": "look into",
+        "orbitable": true
+      },
+      {
+        "w": "expect",
+        "h": "look forward to",
+        "orbitable": true
+      },
+      {
+        "w": "aspect",
+        "h": "look at, appearance",
+        "orbitable": true
+      },
+      {
+        "w": "spectacle",
+        "h": "sight, thing to see",
+        "orbitable": false
+      },
+      {
+        "w": "prospect",
+        "h": "look forward, view",
+        "orbitable": true
+      }
+    ],
+    "prefix": [
+      {
+        "w": "recall",
+        "h": "call back",
+        "orbitable": false
+      },
+      {
+        "w": "remind",
+        "h": "bring back to mind",
+        "orbitable": false
+      },
+      {
+        "w": "resemble",
+        "h": "look like again",
+        "orbitable": false
+      },
+      {
+        "w": "reconsider",
+        "h": "think about again",
+        "orbitable": true
+      }
+    ],
+    "suffix": []
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

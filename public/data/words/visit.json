@@ -1,0 +1,69 @@
+{
+  "word": "visit",
+  "ipa": "/ˈvɪzɪt/",
+  "pos": "verb, noun",
+  "definition": "To go to see or spend time with someone, or a call or journey to see a person or place.",
+  "etymology": "Latin visitāre: from visere (to see, go to see), frequentative of vidēre (to see)",
+  "parts": [
+    {
+      "t": "vis",
+      "type": "root",
+      "m": "to see"
+    },
+    {
+      "t": "-it",
+      "type": "suffix",
+      "m": "frequentative or action"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "vision",
+        "h": "act of seeing",
+        "orbitable": true
+      },
+      {
+        "w": "visible",
+        "h": "able to be seen",
+        "orbitable": true
+      },
+      {
+        "w": "video",
+        "h": "I see (Latin)",
+        "orbitable": false
+      },
+      {
+        "w": "revise",
+        "h": "see again",
+        "orbitable": true
+      },
+      {
+        "w": "supervise",
+        "h": "oversee",
+        "orbitable": true
+      }
+    ],
+    "prefix": [],
+    "suffix": [
+      {
+        "w": "exhibit",
+        "h": "show out",
+        "orbitable": false
+      },
+      {
+        "w": "prohibit",
+        "h": "forbid",
+        "orbitable": false
+      },
+      {
+        "w": "habit",
+        "h": "hold or condition",
+        "orbitable": false
+      }
+    ]
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

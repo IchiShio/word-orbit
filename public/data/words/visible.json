@@ -1,0 +1,74 @@
+{
+  "word": "visible",
+  "ipa": "/ˈvɪzəbəl/",
+  "pos": "adjective",
+  "definition": "able to be seen or perceived by the eye.",
+  "etymology": "Latin visibilis: visus (seen, sight) + -ibilis (able to be)",
+  "parts": [
+    {
+      "t": "vis",
+      "type": "root",
+      "m": "to see"
+    },
+    {
+      "t": "-ible",
+      "type": "suffix",
+      "m": "able to be"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "vision",
+        "h": "act of seeing",
+        "orbitable": true
+      },
+      {
+        "w": "visit",
+        "h": "come to see",
+        "orbitable": true
+      },
+      {
+        "w": "visual",
+        "h": "relating to sight",
+        "orbitable": true
+      },
+      {
+        "w": "visor",
+        "h": "eye covering",
+        "orbitable": false
+      },
+      {
+        "w": "revise",
+        "h": "see again",
+        "orbitable": false
+      }
+    ],
+    "prefix": [],
+    "suffix": [
+      {
+        "w": "possible",
+        "h": "able to happen",
+        "orbitable": true
+      },
+      {
+        "w": "terrible",
+        "h": "able to frighten",
+        "orbitable": false
+      },
+      {
+        "w": "edible",
+        "h": "able to eat",
+        "orbitable": true
+      },
+      {
+        "w": "flexible",
+        "h": "able to bend",
+        "orbitable": false
+      }
+    ]
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

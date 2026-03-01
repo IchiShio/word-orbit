@@ -1,0 +1,74 @@
+{
+  "word": "commit",
+  "ipa": "/kəˈmɪt/",
+  "pos": "verb",
+  "definition": "To pledge or bind oneself to a course of action, or to carry out an action.",
+  "etymology": "Latin committere: com- (together) + mittere (to send, put)",
+  "parts": [
+    {
+      "t": "com-",
+      "type": "prefix",
+      "m": "together, with"
+    },
+    {
+      "t": "mitt",
+      "type": "root",
+      "m": "to send, put, place"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "transmit",
+        "h": "send across",
+        "orbitable": true
+      },
+      {
+        "w": "submit",
+        "h": "put under",
+        "orbitable": true
+      },
+      {
+        "w": "permit",
+        "h": "allow through",
+        "orbitable": true
+      },
+      {
+        "w": "admit",
+        "h": "send in",
+        "orbitable": false
+      },
+      {
+        "w": "omit",
+        "h": "leave out",
+        "orbitable": false
+      }
+    ],
+    "prefix": [
+      {
+        "w": "combine",
+        "h": "join together",
+        "orbitable": false
+      },
+      {
+        "w": "compare",
+        "h": "examine together",
+        "orbitable": false
+      },
+      {
+        "w": "comply",
+        "h": "agree together",
+        "orbitable": false
+      },
+      {
+        "w": "comrade",
+        "h": "share chambers",
+        "orbitable": false
+      }
+    ],
+    "suffix": []
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

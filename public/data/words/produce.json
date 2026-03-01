@@ -1,0 +1,74 @@
+{
+  "word": "produce",
+  "ipa": "/prəˈdjuːs/ (verb) or /ˈprɒdjuːs/ (noun)",
+  "pos": "verb/noun",
+  "definition": "To make, create, or manufacture something; or agricultural products such as fruits and vegetables.",
+  "etymology": "Latin producere: pro- (forward) + ducere (to lead, bring)",
+  "parts": [
+    {
+      "t": "pro-",
+      "type": "prefix",
+      "m": "forward, forth"
+    },
+    {
+      "t": "duc",
+      "type": "root",
+      "m": "to lead, bring"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "conduct",
+        "h": "lead together, guide",
+        "orbitable": true
+      },
+      {
+        "w": "educate",
+        "h": "lead out, develop",
+        "orbitable": true
+      },
+      {
+        "w": "reduce",
+        "h": "lead back, decrease",
+        "orbitable": true
+      },
+      {
+        "w": "introduce",
+        "h": "lead in, present",
+        "orbitable": true
+      },
+      {
+        "w": "seduce",
+        "h": "lead away, attract",
+        "orbitable": false
+      }
+    ],
+    "prefix": [
+      {
+        "w": "progress",
+        "h": "move forward",
+        "orbitable": false
+      },
+      {
+        "w": "provide",
+        "h": "see ahead, supply",
+        "orbitable": true
+      },
+      {
+        "w": "protect",
+        "h": "guard forward",
+        "orbitable": false
+      },
+      {
+        "w": "propose",
+        "h": "put forward",
+        "orbitable": false
+      }
+    ],
+    "suffix": []
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

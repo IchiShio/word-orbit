@@ -1,0 +1,74 @@
+{
+  "word": "biosphere",
+  "ipa": "/ˈbaɪoʊˌsfɪr/",
+  "pos": "noun",
+  "definition": "The regions of Earth and its atmosphere where living organisms exist and interact with their physical environment.",
+  "etymology": "Greek bios (life) + sphaira (sphere); coined by Austrian geologist Eduard Suess in 1875",
+  "parts": [
+    {
+      "t": "bio-",
+      "type": "prefix",
+      "m": "life"
+    },
+    {
+      "t": "sphere",
+      "type": "root",
+      "m": "ball, globe"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "sphere",
+        "h": "ball, globe",
+        "orbitable": true
+      },
+      {
+        "w": "hemisphere",
+        "h": "half sphere",
+        "orbitable": true
+      },
+      {
+        "w": "atmosphere",
+        "h": "air sphere",
+        "orbitable": true
+      },
+      {
+        "w": "spherical",
+        "h": "shaped like sphere",
+        "orbitable": false
+      },
+      {
+        "w": "stratosphere",
+        "h": "layer sphere",
+        "orbitable": true
+      }
+    ],
+    "prefix": [
+      {
+        "w": "biography",
+        "h": "life writing",
+        "orbitable": true
+      },
+      {
+        "w": "biology",
+        "h": "life study",
+        "orbitable": true
+      },
+      {
+        "w": "biodiversity",
+        "h": "life variety",
+        "orbitable": true
+      },
+      {
+        "w": "bionic",
+        "h": "life mechanical",
+        "orbitable": false
+      }
+    ],
+    "suffix": []
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

@@ -1,0 +1,74 @@
+{
+  "word": "prescribe",
+  "ipa": "/prɪˈskɹaɪb/",
+  "pos": "verb",
+  "definition": "To officially order or recommend something, especially a medicine or medical treatment.",
+  "etymology": "Latin praescribere: prae- (before) + scribere (to write)",
+  "parts": [
+    {
+      "t": "pre-",
+      "type": "prefix",
+      "m": "before"
+    },
+    {
+      "t": "scrib",
+      "type": "root",
+      "m": "to write"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "describe",
+        "h": "write down",
+        "orbitable": true
+      },
+      {
+        "w": "scribe",
+        "h": "one who writes",
+        "orbitable": true
+      },
+      {
+        "w": "subscribe",
+        "h": "write underneath",
+        "orbitable": true
+      },
+      {
+        "w": "manuscript",
+        "h": "written by hand",
+        "orbitable": false
+      },
+      {
+        "w": "inscribe",
+        "h": "write into",
+        "orbitable": false
+      }
+    ],
+    "prefix": [
+      {
+        "w": "predict",
+        "h": "say beforehand",
+        "orbitable": false
+      },
+      {
+        "w": "prepare",
+        "h": "make ready before",
+        "orbitable": false
+      },
+      {
+        "w": "prevent",
+        "h": "stop before",
+        "orbitable": false
+      },
+      {
+        "w": "preview",
+        "h": "see before",
+        "orbitable": false
+      }
+    ],
+    "suffix": []
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

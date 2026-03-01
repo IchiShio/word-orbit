@@ -1,0 +1,74 @@
+{
+  "word": "expect",
+  "ipa": "/ɪkˈspɛkt/",
+  "pos": "verb",
+  "definition": "to believe or anticipate that something will happen or arrive",
+  "etymology": "Latin expectāre: ex- (out) + spectāre (to look, watch)",
+  "parts": [
+    {
+      "t": "ex-",
+      "type": "prefix",
+      "m": "out"
+    },
+    {
+      "t": "spect",
+      "type": "root",
+      "m": "to look, watch"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "spectator",
+        "h": "one who watches",
+        "orbitable": true
+      },
+      {
+        "w": "inspect",
+        "h": "look into, examine",
+        "orbitable": true
+      },
+      {
+        "w": "respect",
+        "h": "look back at, regard",
+        "orbitable": true
+      },
+      {
+        "w": "perspective",
+        "h": "way of seeing",
+        "orbitable": false
+      },
+      {
+        "w": "suspect",
+        "h": "look under, doubt",
+        "orbitable": true
+      }
+    ],
+    "prefix": [
+      {
+        "w": "export",
+        "h": "carry out",
+        "orbitable": false
+      },
+      {
+        "w": "expose",
+        "h": "put out, reveal",
+        "orbitable": false
+      },
+      {
+        "w": "exclude",
+        "h": "shut out",
+        "orbitable": false
+      },
+      {
+        "w": "expand",
+        "h": "spread out",
+        "orbitable": false
+      }
+    ],
+    "suffix": []
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

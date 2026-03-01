@@ -1,0 +1,79 @@
+{
+  "word": "report",
+  "ipa": "/rɪˈpɔɹt/",
+  "pos": "verb, noun",
+  "definition": "To give an account or description of something, or a written or spoken account of an event or situation.",
+  "etymology": "Old French reporter: re- (back) + porter (to carry), from Latin reportāre",
+  "parts": [
+    {
+      "t": "re-",
+      "type": "prefix",
+      "m": "back, again"
+    },
+    {
+      "t": "port",
+      "type": "root",
+      "m": "to carry"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "portal",
+        "h": "door, entrance",
+        "orbitable": true
+      },
+      {
+        "w": "transport",
+        "h": "carry across",
+        "orbitable": true
+      },
+      {
+        "w": "import",
+        "h": "bring in",
+        "orbitable": true
+      },
+      {
+        "w": "export",
+        "h": "send out",
+        "orbitable": true
+      },
+      {
+        "w": "support",
+        "h": "carry up, hold",
+        "orbitable": true
+      },
+      {
+        "w": "portfolio",
+        "h": "case for papers",
+        "orbitable": false
+      }
+    ],
+    "prefix": [
+      {
+        "w": "return",
+        "h": "go back",
+        "orbitable": true
+      },
+      {
+        "w": "repeat",
+        "h": "do again",
+        "orbitable": true
+      },
+      {
+        "w": "rebuild",
+        "h": "construct again",
+        "orbitable": false
+      },
+      {
+        "w": "restart",
+        "h": "begin again",
+        "orbitable": false
+      }
+    ],
+    "suffix": []
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

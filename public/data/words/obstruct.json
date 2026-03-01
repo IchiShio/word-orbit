@@ -1,0 +1,74 @@
+{
+  "word": "obstruct",
+  "ipa": "/əbˈstɹʌkt/",
+  "pos": "verb",
+  "definition": "to block or prevent something from happening or from being seen",
+  "etymology": "Latin obstruere: ob- (against) + struere (to build, pile up)",
+  "parts": [
+    {
+      "t": "ob-",
+      "type": "prefix",
+      "m": "against, toward"
+    },
+    {
+      "t": "struct",
+      "type": "root",
+      "m": "to build, pile up"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "structure",
+        "h": "built arrangement",
+        "orbitable": true
+      },
+      {
+        "w": "construct",
+        "h": "build together",
+        "orbitable": true
+      },
+      {
+        "w": "instruct",
+        "h": "build in knowledge",
+        "orbitable": true
+      },
+      {
+        "w": "destroy",
+        "h": "tear down",
+        "orbitable": false
+      },
+      {
+        "w": "infrastructure",
+        "h": "basic structures",
+        "orbitable": false
+      }
+    ],
+    "prefix": [
+      {
+        "w": "obtain",
+        "h": "get toward",
+        "orbitable": false
+      },
+      {
+        "w": "observe",
+        "h": "watch toward",
+        "orbitable": false
+      },
+      {
+        "w": "obvious",
+        "h": "in the way",
+        "orbitable": false
+      },
+      {
+        "w": "obstacle",
+        "h": "something against",
+        "orbitable": true
+      }
+    ],
+    "suffix": []
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

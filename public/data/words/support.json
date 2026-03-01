@@ -1,0 +1,69 @@
+{
+  "word": "support",
+  "ipa": "/səˈpɔɹt/",
+  "pos": "verb, noun",
+  "definition": "to hold up, bear the weight of, or provide help and encouragement to someone or something.",
+  "etymology": "Latin supportāre: sub- (under) + portāre (to carry)",
+  "parts": [
+    {
+      "t": "sub-",
+      "type": "prefix",
+      "m": "under"
+    },
+    {
+      "t": "port",
+      "type": "root",
+      "m": "to carry"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "porter",
+        "h": "carry luggage",
+        "orbitable": true
+      },
+      {
+        "w": "portable",
+        "h": "able to carry",
+        "orbitable": true
+      },
+      {
+        "w": "transport",
+        "h": "carry across",
+        "orbitable": true
+      },
+      {
+        "w": "report",
+        "h": "carry back",
+        "orbitable": false
+      },
+      {
+        "w": "import",
+        "h": "carry in",
+        "orbitable": false
+      }
+    ],
+    "prefix": [
+      {
+        "w": "submarine",
+        "h": "under water",
+        "orbitable": true
+      },
+      {
+        "w": "subway",
+        "h": "under way",
+        "orbitable": false
+      },
+      {
+        "w": "subdue",
+        "h": "under control",
+        "orbitable": false
+      }
+    ],
+    "suffix": []
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

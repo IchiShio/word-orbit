@@ -1,0 +1,74 @@
+{
+  "word": "graphic",
+  "ipa": "/ˈɡræfɪk/",
+  "pos": "adjective",
+  "definition": "relating to visual art, writing, or vivid descriptions that produce a strong mental image.",
+  "etymology": "Greek graphikos: graphia (writing, drawing) + -ikos (adjective suffix), from graphein (to write, draw)",
+  "parts": [
+    {
+      "t": "graph",
+      "type": "root",
+      "m": "to write, draw"
+    },
+    {
+      "t": "-ic",
+      "type": "suffix",
+      "m": "relating to, characterized by"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "graph",
+        "h": "diagram, chart",
+        "orbitable": true
+      },
+      {
+        "w": "write",
+        "h": "inscribe, mark",
+        "orbitable": false
+      },
+      {
+        "w": "photograph",
+        "h": "light writing",
+        "orbitable": true
+      },
+      {
+        "w": "paragraph",
+        "h": "written division",
+        "orbitable": false
+      },
+      {
+        "w": "autograph",
+        "h": "self writing",
+        "orbitable": true
+      }
+    ],
+    "prefix": [],
+    "suffix": [
+      {
+        "w": "dramatic",
+        "h": "relating to drama",
+        "orbitable": true
+      },
+      {
+        "w": "academic",
+        "h": "relating to academy",
+        "orbitable": true
+      },
+      {
+        "w": "classic",
+        "h": "relating to class",
+        "orbitable": false
+      },
+      {
+        "w": "music",
+        "h": "art of sound",
+        "orbitable": false
+      }
+    ]
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

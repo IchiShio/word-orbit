@@ -1,0 +1,74 @@
+{
+  "word": "reject",
+  "ipa": "/rɪˈdʒɛkt/",
+  "pos": "verb, noun",
+  "definition": "To refuse to accept, consider, or show approval for something or someone.",
+  "etymology": "Latin reicere: re- (back) + iacere (to throw)",
+  "parts": [
+    {
+      "t": "re-",
+      "type": "prefix",
+      "m": "back"
+    },
+    {
+      "t": "ject",
+      "type": "root",
+      "m": "to throw"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "eject",
+        "h": "throw out",
+        "orbitable": true
+      },
+      {
+        "w": "inject",
+        "h": "throw in",
+        "orbitable": true
+      },
+      {
+        "w": "project",
+        "h": "throw forward",
+        "orbitable": true
+      },
+      {
+        "w": "object",
+        "h": "throw against",
+        "orbitable": false
+      },
+      {
+        "w": "trajectory",
+        "h": "throw across",
+        "orbitable": false
+      }
+    ],
+    "prefix": [
+      {
+        "w": "return",
+        "h": "come back",
+        "orbitable": false
+      },
+      {
+        "w": "rebuild",
+        "h": "build again",
+        "orbitable": false
+      },
+      {
+        "w": "reconsider",
+        "h": "think again",
+        "orbitable": false
+      },
+      {
+        "w": "rewrite",
+        "h": "write again",
+        "orbitable": false
+      }
+    ],
+    "suffix": []
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

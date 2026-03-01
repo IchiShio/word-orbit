@@ -1,0 +1,95 @@
+{
+  "word": "antibiotic",
+  "ipa": "/ˌæntɪbaɪˈɒtɪk/",
+  "pos": "noun/adjective",
+  "definition": "A medicine that kills bacteria or stops their growth, used to treat infections.",
+  "etymology": "Greek anti- (against) + bios (life) + -ic (relating to); literally 'against life'",
+  "parts": [
+    {
+      "t": "anti-",
+      "type": "prefix",
+      "m": "against"
+    },
+    {
+      "t": "bio",
+      "type": "root",
+      "m": "life"
+    },
+    {
+      "t": "-tic",
+      "type": "suffix",
+      "m": "relating to"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "biology",
+        "h": "study of life",
+        "orbitable": true
+      },
+      {
+        "w": "biography",
+        "h": "life story",
+        "orbitable": true
+      },
+      {
+        "w": "biotic",
+        "h": "relating to life",
+        "orbitable": false
+      },
+      {
+        "w": "biopsy",
+        "h": "life sample",
+        "orbitable": false
+      },
+      {
+        "w": "biodiversity",
+        "h": "life variety",
+        "orbitable": true
+      }
+    ],
+    "prefix": [
+      {
+        "w": "antibody",
+        "h": "against invaders",
+        "orbitable": true
+      },
+      {
+        "w": "antivirus",
+        "h": "against virus",
+        "orbitable": true
+      },
+      {
+        "w": "antitoxin",
+        "h": "against poison",
+        "orbitable": false
+      },
+      {
+        "w": "antidote",
+        "h": "against effect",
+        "orbitable": true
+      }
+    ],
+    "suffix": [
+      {
+        "w": "arctic",
+        "h": "relating to north",
+        "orbitable": false
+      },
+      {
+        "w": "acoustic",
+        "h": "relating to sound",
+        "orbitable": false
+      },
+      {
+        "w": "democratic",
+        "h": "relating to people rule",
+        "orbitable": false
+      }
+    ]
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

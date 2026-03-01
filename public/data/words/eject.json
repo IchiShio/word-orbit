@@ -1,0 +1,69 @@
+{
+  "word": "eject",
+  "ipa": "/ɪˈdʒɛkt/",
+  "pos": "verb",
+  "definition": "To force or throw something out with sudden violence or urgency.",
+  "etymology": "Latin eicere: e- (out) + iacere (to throw)",
+  "parts": [
+    {
+      "t": "e-",
+      "type": "prefix",
+      "m": "out"
+    },
+    {
+      "t": "ject",
+      "type": "root",
+      "m": "to throw"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "project",
+        "h": "throw forward",
+        "orbitable": true
+      },
+      {
+        "w": "inject",
+        "h": "throw in",
+        "orbitable": true
+      },
+      {
+        "w": "reject",
+        "h": "throw back",
+        "orbitable": true
+      },
+      {
+        "w": "subject",
+        "h": "throw under",
+        "orbitable": false
+      },
+      {
+        "w": "trajectory",
+        "h": "path of thrown object",
+        "orbitable": false
+      }
+    ],
+    "prefix": [
+      {
+        "w": "export",
+        "h": "send out",
+        "orbitable": false
+      },
+      {
+        "w": "exclude",
+        "h": "shut out",
+        "orbitable": false
+      },
+      {
+        "w": "exhaust",
+        "h": "use up completely",
+        "orbitable": false
+      }
+    ],
+    "suffix": []
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

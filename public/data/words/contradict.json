@@ -1,0 +1,74 @@
+{
+  "word": "contradict",
+  "ipa": "/ˌkɑːn.trəˈdɪkt/",
+  "pos": "verb",
+  "definition": "To say or assert the opposite of what someone else has said, or to deny or oppose a statement.",
+  "etymology": "Latin contradicere: contra- (against) + dicere (to say)",
+  "parts": [
+    {
+      "t": "contra-",
+      "type": "prefix",
+      "m": "against"
+    },
+    {
+      "t": "dict",
+      "type": "root",
+      "m": "to say, speak"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "dictate",
+        "h": "say aloud with authority",
+        "orbitable": true
+      },
+      {
+        "w": "predict",
+        "h": "say beforehand",
+        "orbitable": true
+      },
+      {
+        "w": "verdict",
+        "h": "truth declared",
+        "orbitable": false
+      },
+      {
+        "w": "dictionary",
+        "h": "collection of words",
+        "orbitable": false
+      },
+      {
+        "w": "edict",
+        "h": "official decree",
+        "orbitable": false
+      }
+    ],
+    "prefix": [
+      {
+        "w": "contrast",
+        "h": "stand against",
+        "orbitable": true
+      },
+      {
+        "w": "contract",
+        "h": "draw together",
+        "orbitable": true
+      },
+      {
+        "w": "contrary",
+        "h": "opposite direction",
+        "orbitable": false
+      },
+      {
+        "w": "contraction",
+        "h": "shrinking together",
+        "orbitable": false
+      }
+    ],
+    "suffix": []
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

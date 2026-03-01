@@ -1,0 +1,74 @@
+{
+  "word": "paragraph",
+  "ipa": "/ˈpɛɹəɡɹæf/",
+  "pos": "noun",
+  "definition": "A distinct section of a piece of writing, usually dealing with a single theme and starting on a new line.",
+  "etymology": "Greek paragraphos: para- (beside) + graphos (written), originally meaning 'written beside' as a mark indicating a new section",
+  "parts": [
+    {
+      "t": "para-",
+      "type": "prefix",
+      "m": "beside, beyond"
+    },
+    {
+      "t": "graph",
+      "type": "root",
+      "m": "to write, written"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "graph",
+        "h": "written mark, diagram",
+        "orbitable": true
+      },
+      {
+        "w": "graphic",
+        "h": "visual, written form",
+        "orbitable": true
+      },
+      {
+        "w": "photograph",
+        "h": "light writing",
+        "orbitable": true
+      },
+      {
+        "w": "write",
+        "h": "mark on surface",
+        "orbitable": false
+      },
+      {
+        "w": "autograph",
+        "h": "self-written signature",
+        "orbitable": true
+      }
+    ],
+    "prefix": [
+      {
+        "w": "paramedic",
+        "h": "helper beside doctor",
+        "orbitable": false
+      },
+      {
+        "w": "paraphrase",
+        "h": "restate beside original",
+        "orbitable": true
+      },
+      {
+        "w": "parallel",
+        "h": "beside each other",
+        "orbitable": true
+      },
+      {
+        "w": "paradox",
+        "h": "contrary opinion",
+        "orbitable": false
+      }
+    ],
+    "suffix": []
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

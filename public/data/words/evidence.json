@@ -1,0 +1,95 @@
+{
+  "word": "evidence",
+  "ipa": "/ˈɛvɪdəns/",
+  "pos": "noun",
+  "definition": "facts or signs that make something seem true or probable.",
+  "etymology": "Latin evidentia: e- (out) + vidēre (to see)",
+  "parts": [
+    {
+      "t": "e-",
+      "type": "prefix",
+      "m": "out"
+    },
+    {
+      "t": "vid",
+      "type": "root",
+      "m": "to see"
+    },
+    {
+      "t": "-ence",
+      "type": "suffix",
+      "m": "state or quality"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "video",
+        "h": "I see, watch",
+        "orbitable": true
+      },
+      {
+        "w": "vision",
+        "h": "act of seeing",
+        "orbitable": true
+      },
+      {
+        "w": "visible",
+        "h": "able to be seen",
+        "orbitable": true
+      },
+      {
+        "w": "evident",
+        "h": "clear to see",
+        "orbitable": true
+      },
+      {
+        "w": "provide",
+        "h": "see ahead, supply",
+        "orbitable": false
+      },
+      {
+        "w": "individual",
+        "h": "not divisible, single",
+        "orbitable": false
+      }
+    ],
+    "prefix": [
+      {
+        "w": "erupt",
+        "h": "break out",
+        "orbitable": false
+      },
+      {
+        "w": "emit",
+        "h": "send out",
+        "orbitable": false
+      },
+      {
+        "w": "evolve",
+        "h": "unfold out",
+        "orbitable": false
+      }
+    ],
+    "suffix": [
+      {
+        "w": "presence",
+        "h": "being before",
+        "orbitable": true
+      },
+      {
+        "w": "absence",
+        "h": "being away",
+        "orbitable": true
+      },
+      {
+        "w": "confidence",
+        "h": "trust together",
+        "orbitable": false
+      }
+    ]
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

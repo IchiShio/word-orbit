@@ -1,0 +1,90 @@
+{
+  "word": "geography",
+  "ipa": "/dʒiˈɑɡrəfi/",
+  "pos": "noun",
+  "definition": "The study of Earth's physical features, climates, populations, and the relationships between people and their environments.",
+  "etymology": "Greek geōgraphia: geō- (earth) + -graphia (writing, description)",
+  "parts": [
+    {
+      "t": "geo-",
+      "type": "prefix",
+      "m": "earth"
+    },
+    {
+      "t": "graph",
+      "type": "root",
+      "m": "to write, describe"
+    },
+    {
+      "t": "-y",
+      "type": "suffix",
+      "m": "field of study, practice"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "graph",
+        "h": "writing, visual representation",
+        "orbitable": true
+      },
+      {
+        "w": "graphic",
+        "h": "relating to writing or images",
+        "orbitable": true
+      },
+      {
+        "w": "photograph",
+        "h": "light writing, image",
+        "orbitable": true
+      },
+      {
+        "w": "biography",
+        "h": "life writing, life story",
+        "orbitable": true
+      },
+      {
+        "w": "autograph",
+        "h": "self writing, signature",
+        "orbitable": false
+      }
+    ],
+    "prefix": [
+      {
+        "w": "geology",
+        "h": "earth science, rocks",
+        "orbitable": true
+      },
+      {
+        "w": "geometry",
+        "h": "earth measurement, shapes",
+        "orbitable": true
+      },
+      {
+        "w": "geothermal",
+        "h": "earth heat, temperature",
+        "orbitable": false
+      }
+    ],
+    "suffix": [
+      {
+        "w": "history",
+        "h": "study of past events",
+        "orbitable": true
+      },
+      {
+        "w": "biology",
+        "h": "study of life",
+        "orbitable": true
+      },
+      {
+        "w": "psychology",
+        "h": "study of mind",
+        "orbitable": true
+      }
+    ]
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

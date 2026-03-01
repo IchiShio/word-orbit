@@ -1,0 +1,74 @@
+{
+  "word": "compose",
+  "ipa": "/kəmˈpoʊz/",
+  "pos": "verb",
+  "definition": "to create or write something such as music, poetry, or text, or to calm oneself.",
+  "etymology": "Latin componere: com- (together) + ponere (to put, place)",
+  "parts": [
+    {
+      "t": "com-",
+      "type": "prefix",
+      "m": "together"
+    },
+    {
+      "t": "pos",
+      "type": "root",
+      "m": "to put, place"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "position",
+        "h": "place, location",
+        "orbitable": true
+      },
+      {
+        "w": "postpone",
+        "h": "put off, delay",
+        "orbitable": true
+      },
+      {
+        "w": "suppose",
+        "h": "put forth idea",
+        "orbitable": false
+      },
+      {
+        "w": "dispose",
+        "h": "arrange, put away",
+        "orbitable": false
+      },
+      {
+        "w": "deposit",
+        "h": "place down",
+        "orbitable": true
+      }
+    ],
+    "prefix": [
+      {
+        "w": "combine",
+        "h": "join together",
+        "orbitable": true
+      },
+      {
+        "w": "compare",
+        "h": "examine together",
+        "orbitable": true
+      },
+      {
+        "w": "complete",
+        "h": "finish together",
+        "orbitable": true
+      },
+      {
+        "w": "compress",
+        "h": "squeeze together",
+        "orbitable": false
+      }
+    ],
+    "suffix": []
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

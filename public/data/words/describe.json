@@ -1,0 +1,74 @@
+{
+  "word": "describe",
+  "ipa": "/dɪˈskɹaɪb/",
+  "pos": "verb",
+  "definition": "To give a spoken or written account of something by stating its appearance, qualities, or characteristics.",
+  "etymology": "Latin describere: de- (down, out) + scribere (to write)",
+  "parts": [
+    {
+      "t": "de-",
+      "type": "prefix",
+      "m": "down, out"
+    },
+    {
+      "t": "scrib",
+      "type": "root",
+      "m": "to write"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "scribe",
+        "h": "write, clerk",
+        "orbitable": true
+      },
+      {
+        "w": "script",
+        "h": "written text",
+        "orbitable": true
+      },
+      {
+        "w": "subscribe",
+        "h": "write under, sign up",
+        "orbitable": true
+      },
+      {
+        "w": "prescribe",
+        "h": "write before, order",
+        "orbitable": true
+      },
+      {
+        "w": "inscription",
+        "h": "written on, engraved",
+        "orbitable": false
+      }
+    ],
+    "prefix": [
+      {
+        "w": "descend",
+        "h": "go down",
+        "orbitable": false
+      },
+      {
+        "w": "deserve",
+        "h": "be worthy of",
+        "orbitable": false
+      },
+      {
+        "w": "destroy",
+        "h": "undo, ruin",
+        "orbitable": false
+      },
+      {
+        "w": "detail",
+        "h": "describe fully",
+        "orbitable": false
+      }
+    ],
+    "suffix": []
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

@@ -1,0 +1,79 @@
+{
+  "word": "mission",
+  "ipa": "/ˈmɪʃən/",
+  "pos": "noun",
+  "definition": "An important assignment or purpose that someone is sent to accomplish, or a strongly felt aim or calling.",
+  "etymology": "Latin missio: mittere (to send) + -io (noun suffix); from past participle missus",
+  "parts": [
+    {
+      "t": "miss",
+      "type": "root",
+      "m": "to send"
+    },
+    {
+      "t": "-ion",
+      "type": "suffix",
+      "m": "act of, state of"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "transmit",
+        "h": "send across",
+        "orbitable": true
+      },
+      {
+        "w": "emit",
+        "h": "send out",
+        "orbitable": true
+      },
+      {
+        "w": "missile",
+        "h": "thing sent",
+        "orbitable": true
+      },
+      {
+        "w": "dismiss",
+        "h": "send away",
+        "orbitable": true
+      },
+      {
+        "w": "admit",
+        "h": "send toward",
+        "orbitable": false
+      },
+      {
+        "w": "remit",
+        "h": "send back",
+        "orbitable": false
+      }
+    ],
+    "prefix": [],
+    "suffix": [
+      {
+        "w": "creation",
+        "h": "act of creating",
+        "orbitable": false
+      },
+      {
+        "w": "nation",
+        "h": "state of being born",
+        "orbitable": false
+      },
+      {
+        "w": "decision",
+        "h": "act of deciding",
+        "orbitable": false
+      },
+      {
+        "w": "passion",
+        "h": "state of suffering",
+        "orbitable": false
+      }
+    ]
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

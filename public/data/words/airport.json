@@ -1,0 +1,53 @@
+{
+  "word": "airport",
+  "ipa": "/ˈɛɹˌpoɹt/",
+  "pos": "noun",
+  "definition": "A facility with runways and terminals where aircraft take off and land for passenger and cargo transport.",
+  "etymology": "air (from Old English æ̅r, from Latin aer) + port (from Latin portus, harbor)",
+  "parts": [
+    {
+      "t": "air",
+      "type": "root",
+      "m": "atmosphere, sky"
+    },
+    {
+      "t": "port",
+      "type": "root",
+      "m": "harbor, place of entry"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "airplane",
+        "h": "aircraft that flies",
+        "orbitable": true
+      },
+      {
+        "w": "airway",
+        "h": "route for aircraft",
+        "orbitable": true
+      },
+      {
+        "w": "seaport",
+        "h": "harbor for ships",
+        "orbitable": false
+      },
+      {
+        "w": "passport",
+        "h": "travel document",
+        "orbitable": false
+      },
+      {
+        "w": "transport",
+        "h": "carry across",
+        "orbitable": true
+      }
+    ],
+    "prefix": [],
+    "suffix": []
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

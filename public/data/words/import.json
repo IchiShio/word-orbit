@@ -1,0 +1,79 @@
+{
+  "word": "import",
+  "ipa": "/ɪmˈpɔɹt/",
+  "pos": "verb, noun",
+  "definition": "to bring goods into a country from abroad, or a product brought in from another country.",
+  "etymology": "Latin importāre: in- (in, into) + portāre (to carry)",
+  "parts": [
+    {
+      "t": "im-",
+      "type": "prefix",
+      "m": "in, into"
+    },
+    {
+      "t": "port",
+      "type": "root",
+      "m": "to carry"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "export",
+        "h": "carry out",
+        "orbitable": true
+      },
+      {
+        "w": "transport",
+        "h": "carry across",
+        "orbitable": true
+      },
+      {
+        "w": "portable",
+        "h": "able to carry",
+        "orbitable": true
+      },
+      {
+        "w": "porter",
+        "h": "one who carries",
+        "orbitable": false
+      },
+      {
+        "w": "report",
+        "h": "carry back",
+        "orbitable": false
+      },
+      {
+        "w": "deport",
+        "h": "carry away",
+        "orbitable": false
+      }
+    ],
+    "prefix": [
+      {
+        "w": "impose",
+        "h": "place upon",
+        "orbitable": true
+      },
+      {
+        "w": "improve",
+        "h": "make better",
+        "orbitable": false
+      },
+      {
+        "w": "impress",
+        "h": "press into",
+        "orbitable": false
+      },
+      {
+        "w": "immoral",
+        "h": "not moral",
+        "orbitable": false
+      }
+    ],
+    "suffix": []
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}

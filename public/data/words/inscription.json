@@ -1,0 +1,90 @@
+{
+  "word": "inscription",
+  "ipa": "/ɪnˈskrɪpʃən/",
+  "pos": "noun",
+  "definition": "text written or engraved on a surface, especially as a dedication or memorial.",
+  "etymology": "Latin inscriptio: in- (into, on) + scribere (to write)",
+  "parts": [
+    {
+      "t": "in-",
+      "type": "prefix",
+      "m": "into, on"
+    },
+    {
+      "t": "scrib",
+      "type": "root",
+      "m": "to write"
+    },
+    {
+      "t": "-tion",
+      "type": "suffix",
+      "m": "act, state of"
+    }
+  ],
+  "orbits": {
+    "root": [
+      {
+        "w": "scribe",
+        "h": "one who writes",
+        "orbitable": true
+      },
+      {
+        "w": "describe",
+        "h": "write down",
+        "orbitable": true
+      },
+      {
+        "w": "manuscript",
+        "h": "written by hand",
+        "orbitable": true
+      },
+      {
+        "w": "subscribe",
+        "h": "write under",
+        "orbitable": false
+      },
+      {
+        "w": "script",
+        "h": "written text",
+        "orbitable": false
+      }
+    ],
+    "prefix": [
+      {
+        "w": "inside",
+        "h": "in plus side",
+        "orbitable": false
+      },
+      {
+        "w": "increase",
+        "h": "make more",
+        "orbitable": false
+      },
+      {
+        "w": "include",
+        "h": "shut in",
+        "orbitable": false
+      }
+    ],
+    "suffix": [
+      {
+        "w": "creation",
+        "h": "act of creating",
+        "orbitable": true
+      },
+      {
+        "w": "action",
+        "h": "act of doing",
+        "orbitable": true
+      },
+      {
+        "w": "collection",
+        "h": "act of collecting",
+        "orbitable": false
+      }
+    ]
+  },
+  "frequency": 0.7,
+  "source": "claude-api",
+  "reviewed": false
+}
