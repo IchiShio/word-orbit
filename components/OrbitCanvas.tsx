@@ -1,6 +1,6 @@
 'use client'
 import { useRef, useEffect, useCallback } from 'react'
-import type { WordData, OrbitWord } from '@/lib/types'
+import type { WordData, OrbitWord, Part } from '@/lib/types'
 import { ORBIT_COLORS } from '@/lib/colors'
 
 const OC = ORBIT_COLORS
@@ -40,9 +40,10 @@ interface CanvasState {
 interface Props {
   data: WordData
   onSelectNode: (node: OrbitWord | null) => void
+  selParts: Part[]
 }
 
-export default function OrbitCanvas({ data, onSelectNode }: Props) {
+export default function OrbitCanvas({ data, onSelectNode, selParts }: Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const stateRef = useRef<CanvasState>({
     cur: data.word,
@@ -65,10 +66,12 @@ export default function OrbitCanvas({ data, onSelectNode }: Props) {
   const CXRef = useRef<number>(0)
   const CYRef = useRef<number>(0)
   const dprRef = useRef<number>(1)
+  const selPartsRef = useRef<Part[]>([])
+  selPartsRef.current = selParts
 
   const updRT = useCallback(() => {
     const b = Math.min(CWRef.current * 0.46, CHRef.current * 0.44)
-    stateRef.current.ringT = [b * 0.50, b * 0.73, b * 0.88]
+    stateRef.current.ringT = [b * 0.50, b * 0.73, b * 0.80]
   }, [])
 
   const resize = useCallback(() => {
@@ -322,6 +325,66 @@ export default function OrbitCanvas({ data, onSelectNode }: Props) {
     ctx.globalAlpha = 1
   }, [drawConn])
 
+  const drawSelInfo = useCallback((ctx: CanvasRenderingContext2D) => {
+    const S = stateRef.current
+    const parts = selPartsRef.current
+    if (!S.selW || !parts.length) return
+    const CX = CXRef.current
+    const CH = CHRef.current
+    const sep = '  ·  '
+    const yWord  = CH - 52
+    const yNames = CH - 34
+    const yMeans = CH - 18
+
+    // Thin separator line
+    ctx.globalAlpha = 0.1
+    ctx.strokeStyle = '#ada9a0'
+    ctx.lineWidth = 0.5
+    ctx.beginPath()
+    ctx.moveTo(CX - 90, CH - 64)
+    ctx.lineTo(CX + 90, CH - 64)
+    ctx.stroke()
+
+    // Selected word name
+    ctx.globalAlpha = 0.9
+    ctx.font = '400 11px "IBM Plex Mono"'
+    ctx.fillStyle = '#efd64c'
+    ctx.textAlign = 'center'
+    ctx.fillText(S.selW, CX, yWord)
+
+    // Line 1: colored morpheme names
+    ctx.font = '600 10px "IBM Plex Mono"'
+    const sepW = ctx.measureText(sep).width
+    let totalW = 0
+    parts.forEach((p, i) => {
+      if (i > 0) totalW += sepW
+      totalW += ctx.measureText(p.t).width
+    })
+    let x = CX - totalW / 2
+    ctx.textAlign = 'left'
+    parts.forEach((p, i) => {
+      if (i > 0) {
+        ctx.globalAlpha = 0.35
+        ctx.fillStyle = '#ada9a0'
+        ctx.fillText(sep, x, yNames)
+        x += sepW
+      }
+      const ti = TYPES.indexOf(p.type as typeof TYPES[number])
+      ctx.globalAlpha = 1
+      ctx.fillStyle = ti >= 0 ? OC[ti] : '#ada9a0'
+      ctx.fillText(p.t, x, yNames)
+      x += ctx.measureText(p.t).width
+    })
+
+    // Line 2: meanings
+    ctx.font = '300 10px "IBM Plex Mono"'
+    ctx.globalAlpha = 0.75
+    ctx.fillStyle = '#c8c5bc'
+    ctx.textAlign = 'center'
+    ctx.fillText(parts.map(p => p.m).join('  ·  '), CX, yMeans)
+    ctx.globalAlpha = 1
+  }, [])
+
   const update = useCallback((dt: number) => {
     const S = stateRef.current
     const CX = CXRef.current, CY = CYRef.current
@@ -413,6 +476,7 @@ export default function OrbitCanvas({ data, onSelectNode }: Props) {
       drawSun(ctx)
       S.fading.forEach(n => drawNode(ctx, n, true))
       S.nodes.forEach(n => drawNode(ctx, n, false))
+      drawSelInfo(ctx)
       rafRef.current = requestAnimationFrame(loop)
     }
     rafRef.current = requestAnimationFrame(loop)
@@ -466,7 +530,7 @@ export default function OrbitCanvas({ data, onSelectNode }: Props) {
       cv.removeEventListener('touchstart', handleTouch)
       window.removeEventListener('resize', handleResize)
     }
-  }, [data, initStars, resize, updRT, update, drawStars, drawRings, drawSun, drawNode, nodeAt, onSelectNode])
+  }, [data, initStars, resize, updRT, update, drawStars, drawRings, drawSun, drawNode, drawSelInfo, nodeAt, onSelectNode])
 
   return (
     <div style={{ position: 'relative', width: '100%', height: '100%' }}>

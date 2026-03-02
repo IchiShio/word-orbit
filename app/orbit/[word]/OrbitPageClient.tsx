@@ -1,13 +1,21 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import OrbitCanvas from '@/components/OrbitCanvas'
 import InfoPanel from '@/components/InfoPanel'
 import MorphemeEquation from '@/components/MorphemeEquation'
-import type { WordData, OrbitWord } from '@/lib/types'
-
+import type { WordData, OrbitWord, Part } from '@/lib/types'
 
 export default function OrbitPageClient({ data }: { data: WordData }) {
   const [selectedNode, setSelectedNode] = useState<OrbitWord | null>(null)
+  const [nodeParts, setNodeParts] = useState<Part[]>([])
+
+  useEffect(() => {
+    if (!selectedNode) { setNodeParts([]); return }
+    fetch(`/data/words/${selectedNode.w}.json`)
+      .then(r => r.ok ? r.json() : null)
+      .then((d: WordData | null) => setNodeParts(d?.parts ?? []))
+      .catch(() => setNodeParts([]))
+  }, [selectedNode?.w])
 
   function speak(w: string) {
     const audio = new Audio(`/audio/${w}.mp3`)
@@ -89,11 +97,11 @@ export default function OrbitPageClient({ data }: { data: WordData }) {
       <div className="orbit-root">
         {/* Canvas area */}
         <div className="orbit-canvas-wrap">
-          <OrbitCanvas data={data} onSelectNode={setSelectedNode} />
+          <OrbitCanvas data={data} onSelectNode={setSelectedNode} selParts={nodeParts} />
 
           {/* Desktop overlays */}
           <div className="overlay-info">
-            <InfoPanel data={data} selectedNode={selectedNode} onSpeak={speak} />
+            <InfoPanel data={data} selectedNode={selectedNode} nodeParts={nodeParts} onSpeak={speak} />
           </div>
           <div className="overlay-morpheme">
             <MorphemeEquation parts={data.parts} />
@@ -105,7 +113,7 @@ export default function OrbitPageClient({ data }: { data: WordData }) {
 
         {/* Mobile bottom panel */}
         <div className="mobile-panel">
-          <InfoPanel data={data} selectedNode={selectedNode} onSpeak={speak} />
+          <InfoPanel data={data} selectedNode={selectedNode} nodeParts={nodeParts} onSpeak={speak} />
           <div style={{
             marginTop: 10,
             fontFamily: 'var(--font-ibm-plex-mono)',

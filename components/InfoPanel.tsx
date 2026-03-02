@@ -1,5 +1,4 @@
 'use client'
-import { useState, useEffect } from 'react'
 import type { WordData, OrbitWord, Part } from '@/lib/types'
 import { useRouter } from 'next/navigation'
 import { TYPE_COLORS } from '@/lib/colors'
@@ -7,6 +6,7 @@ import { TYPE_COLORS } from '@/lib/colors'
 interface Props {
   data: WordData
   selectedNode: OrbitWord | null
+  nodeParts: Part[]
   onSpeak: (word: string) => void
 }
 
@@ -27,17 +27,8 @@ function MiniMorpheme({ parts }: { parts: Part[] }) {
   )
 }
 
-export default function InfoPanel({ data, selectedNode, onSpeak }: Props) {
+export default function InfoPanel({ data, selectedNode, nodeParts, onSpeak }: Props) {
   const router = useRouter()
-  const [nodeParts, setNodeParts] = useState<Part[]>([])
-
-  useEffect(() => {
-    if (!selectedNode) { setNodeParts([]); return }
-    fetch(`/data/words/${selectedNode.w}.json`)
-      .then(r => r.ok ? r.json() : null)
-      .then((d: WordData | null) => setNodeParts(d?.parts ?? []))
-      .catch(() => setNodeParts([]))
-  }, [selectedNode?.w])
 
   return (
     <div style={{ textAlign: 'right' }}>
