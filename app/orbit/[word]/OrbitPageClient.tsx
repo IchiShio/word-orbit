@@ -5,6 +5,7 @@ import InfoPanel from '@/components/InfoPanel'
 import MorphemeEquation from '@/components/MorphemeEquation'
 import type { WordData, OrbitWord } from '@/lib/types'
 
+
 export default function OrbitPageClient({ data }: { data: WordData }) {
   const [selectedNode, setSelectedNode] = useState<OrbitWord | null>(null)
 
@@ -105,11 +106,8 @@ export default function OrbitPageClient({ data }: { data: WordData }) {
         {/* Mobile bottom panel */}
         <div className="mobile-panel">
           <InfoPanel data={data} selectedNode={selectedNode} onSpeak={speak} />
-          <div style={{ marginTop: 10 }}>
-            <MorphemeEquation parts={data.parts} />
-          </div>
           <div style={{
-            marginTop: 8,
+            marginTop: 10,
             fontFamily: 'var(--font-ibm-plex-mono)',
             fontSize: 9,
             color: 'rgba(173,169,160,0.4)',

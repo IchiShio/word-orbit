@@ -64,7 +64,7 @@ export default function OrbitCanvas({ data, onSelectNode }: Props) {
   const dprRef = useRef<number>(1)
 
   const updRT = useCallback(() => {
-    const b = Math.min(CWRef.current * 0.36, CHRef.current * 0.30)
+    const b = Math.min(CWRef.current * 0.44, CHRef.current * 0.40)
     stateRef.current.ringT = [b * 0.36, b * 0.62, b * 0.86]
   }, [])
 
@@ -129,11 +129,11 @@ export default function OrbitCanvas({ data, onSelectNode }: Props) {
       if (has) {
         const pt = wd.parts.find(p => p.type === TYPES[i])
         if (pt) {
-          ctx.globalAlpha = 0.22
-          ctx.font = '500 7px "IBM Plex Mono"'
+          ctx.globalAlpha = 0.6
+          ctx.font = '500 10px "IBM Plex Mono"'
           ctx.fillStyle = OC[i]
           ctx.textAlign = 'center'
-          ctx.fillText(`${pt.type}: ${pt.t}`.toUpperCase(), CX, CY - r - 5)
+          ctx.fillText(`${pt.type}: ${pt.t}`.toUpperCase(), CX, CY - r - 7)
         }
       }
     }
@@ -214,7 +214,7 @@ export default function OrbitCanvas({ data, onSelectNode }: Props) {
     if ((isH || isS) && !fading) drawConn(ctx, n)
 
     const f = 0.7
-    const baseR = 3 + f * 3.5
+    const baseR = 5 + f * 5
     const r = baseR * (isH ? 1.25 : 1)
 
     ctx.globalAlpha = a
@@ -236,15 +236,15 @@ export default function OrbitCanvas({ data, onSelectNode }: Props) {
     }
 
     ctx.globalAlpha = a
-    ctx.font = `${isH ? '500' : '400'} ${isH ? 11 : 10}px "IBM Plex Mono"`
+    ctx.font = `${isH ? '600' : '500'} ${isH ? 13 : 12}px "IBM Plex Mono"`
     ctx.fillStyle = isH || isS ? '#efd64c' : '#ada9a0'
     ctx.textAlign = 'center'
-    ctx.fillText(n.word, n.x, n.y + r + 12)
+    ctx.fillText(n.word, n.x, n.y + r + 14)
 
-    ctx.font = 'italic 300 9px "Fraunces"'
-    ctx.globalAlpha = a * (isH ? 0.6 : 0.15)
+    ctx.font = 'italic 300 10px "Fraunces"'
+    ctx.globalAlpha = a * (isH ? 0.8 : 0.3)
     ctx.fillStyle = isH ? '#efd64c' : '#ada9a0'
-    ctx.fillText(n.hint, n.x, n.y + r + 23)
+    ctx.fillText(n.hint, n.x, n.y + r + 27)
     ctx.globalAlpha = 1
   }, [drawConn])
 
@@ -291,7 +291,7 @@ export default function OrbitCanvas({ data, onSelectNode }: Props) {
     let bd = 999
     for (const n of stateRef.current.nodes) {
       const d = Math.hypot(n.x - mx, n.y - my)
-      if (d < 28 && d < bd) { bd = d; best = n }
+      if (d < 36 && d < bd) { bd = d; best = n }
     }
     return best
   }, [])

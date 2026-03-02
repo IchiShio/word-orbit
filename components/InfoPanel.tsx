@@ -18,18 +18,12 @@ const TYPE_COLOR: Record<string, string> = {
 function MiniMorpheme({ parts }: { parts: Part[] }) {
   if (!parts.length) return null
   return (
-    <div style={{ display: 'flex', alignItems: 'center', gap: 4, justifyContent: 'flex-end', marginTop: 5, flexWrap: 'wrap' }}>
+    <div style={{ marginTop: 8, display: 'flex', flexDirection: 'column', gap: 5, alignItems: 'flex-end' }}>
       {parts.map((p, i) => (
-        <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
-          {i > 0 && <span style={{ color: 'rgba(173,169,160,0.3)', fontSize: 10 }}>+</span>}
-          <div style={{
-            padding: '2px 7px', borderRadius: 4,
-            background: `${TYPE_COLOR[p.type]}18`,
-            border: `1px solid ${TYPE_COLOR[p.type]}44`,
-          }}>
-            <span style={{ fontSize: 11, color: TYPE_COLOR[p.type], fontFamily: 'var(--font-ibm-plex-mono)' }}>{p.t}</span>
-            <span style={{ fontSize: 8, color: 'rgba(173,169,160,0.5)', fontFamily: 'var(--font-ibm-plex-mono)', marginLeft: 4 }}>{p.m}</span>
-          </div>
+        <div key={i} style={{ display: 'flex', alignItems: 'baseline', gap: 6 }}>
+          <span style={{ fontSize: 8, letterSpacing: 1, textTransform: 'uppercase', color: TYPE_COLOR[p.type], opacity: 0.5, fontFamily: 'var(--font-ibm-plex-mono)' }}>{p.type}</span>
+          <span style={{ fontSize: 13, color: TYPE_COLOR[p.type], fontFamily: 'var(--font-ibm-plex-mono)', fontWeight: 500 }}>{p.t}</span>
+          <span style={{ fontSize: 11, color: 'rgba(173,169,160,0.75)', fontFamily: 'var(--font-ibm-plex-mono)' }}>{p.m}</span>
         </div>
       ))}
     </div>
@@ -84,14 +78,14 @@ export default function InfoPanel({ data, selectedNode, onSpeak }: Props) {
               🔊
             </button>
           </div>
-          <div style={{ fontSize: 9, color: '#ada9a0', opacity: 0.55, lineHeight: 1.3, marginTop: 2, fontFamily: "'IBM Plex Mono', monospace" }}>
+          <div style={{ fontSize: 11, color: '#ada9a0', opacity: 0.75, lineHeight: 1.4, marginTop: 4, fontFamily: "'IBM Plex Mono', monospace" }}>
             {selectedNode.h}
           </div>
           <MiniMorpheme parts={nodeParts} />
           {selectedNode.orbitable && (
             <span
               onClick={() => router.push(`/orbit/${selectedNode.w}`)}
-              style={{ fontSize: 9, color: '#efd64c', cursor: 'pointer', marginTop: 5, display: 'inline-block', borderBottom: '1px dashed rgba(239,214,76,0.2)' }}
+              style={{ fontSize: 11, color: '#efd64c', cursor: 'pointer', marginTop: 8, display: 'inline-block', borderBottom: '1px dashed rgba(239,214,76,0.3)', paddingBottom: 1 }}
             >
               → orbit this word
             </span>
