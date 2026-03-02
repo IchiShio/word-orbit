@@ -57,7 +57,7 @@ export default function InfoPanel({ data, selectedNode, nodeParts, onSpeak, desk
       {selectedNode && (
         <div style={{ marginTop: 14, paddingTop: 14, borderTop: '1px solid rgba(255,255,255,0.05)' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 8, justifyContent: desktop ? 'flex-start' : 'flex-end' }}>
-            <span style={{ fontFamily: "'Fraunces', serif", fontSize: desktop ? 26 : 18, fontWeight: 300, color: '#ada9a0', lineHeight: 1 }}>
+            <span style={{ fontFamily: "'Fraunces', serif", fontSize: desktop ? 26 : 18, fontWeight: 300, color: selectedNode.ringType ? TYPE_COLORS[selectedNode.ringType] : '#ada9a0', lineHeight: 1 }}>
               {selectedNode.w}
             </span>
             <button

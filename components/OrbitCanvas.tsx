@@ -489,7 +489,7 @@ export default function OrbitCanvas({ data, onSelectNode }: Props) {
       const n = nodeAt(x, y)
       if (n) {
         stateRef.current.selW = n.word
-        onSelectNode({ w: n.word, h: n.hint, orbitable: n.orbitable })
+        onSelectNode({ w: n.word, h: n.hint, orbitable: n.orbitable, ringType: TYPES[n.ring] })
       }
     }
 
@@ -500,7 +500,7 @@ export default function OrbitCanvas({ data, onSelectNode }: Props) {
       if (n) {
         e.preventDefault()
         stateRef.current.selW = n.word
-        onSelectNode({ w: n.word, h: n.hint, orbitable: n.orbitable })
+        onSelectNode({ w: n.word, h: n.hint, orbitable: n.orbitable, ringType: TYPES[n.ring] })
       }
     }
 

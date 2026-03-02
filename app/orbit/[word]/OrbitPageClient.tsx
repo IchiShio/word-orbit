@@ -83,7 +83,7 @@ function NodeCard({ node, parts, onSpeak }: { node: OrbitWord; parts: Part[]; on
       animation: 'popupIn 0.18s ease-out', animationFillMode: 'both',
     }}>
       <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-        <span style={{ fontFamily: "'Fraunces', serif", fontSize: 34, fontWeight: 300, color: '#efd64c', lineHeight: 1 }}>
+        <span style={{ fontFamily: "'Fraunces', serif", fontSize: 34, fontWeight: 300, color: node.ringType ? TYPE_COLORS[node.ringType] : '#efd64c', lineHeight: 1 }}>
           {node.w}
         </span>
         <button onClick={() => onSpeak(node.w)}

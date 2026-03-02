@@ -8,6 +8,7 @@ export interface OrbitWord {
   w: string      // word
   h: string      // hint
   orbitable: boolean
+  ringType?: 'root' | 'prefix' | 'suffix'
 }
 
 export interface WordData {
