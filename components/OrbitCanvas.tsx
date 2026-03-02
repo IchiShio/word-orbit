@@ -73,16 +73,17 @@ export default function OrbitCanvas({ data, onSelectNode }: Props) {
     if (!cv) return
     const dpr = window.devicePixelRatio || 1
     dprRef.current = dpr
-    CWRef.current = window.innerWidth
-    CHRef.current = window.innerHeight
-    cv.width = CWRef.current * dpr
-    cv.height = CHRef.current * dpr
-    cv.style.width = CWRef.current + 'px'
-    cv.style.height = CHRef.current + 'px'
+    // Fill parent container, not the full viewport
+    const w = cv.offsetWidth
+    const h = cv.offsetHeight
+    CWRef.current = w
+    CHRef.current = h
+    cv.width = w * dpr
+    cv.height = h * dpr
     const ctx = cv.getContext('2d')!
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0)
-    CXRef.current = CWRef.current / 2
-    CYRef.current = CHRef.current * 0.38
+    CXRef.current = w / 2
+    CYRef.current = h * 0.42
     updRT()
   }, [updRT])
 
@@ -300,7 +301,6 @@ export default function OrbitCanvas({ data, onSelectNode }: Props) {
     if (!cv) return
     const ctx = cv.getContext('2d')!
 
-    // Reset state for new word
     const S = stateRef.current
     S.fading = S.nodes.map(n => ({ ...n }))
     S.nodes = []
@@ -327,14 +327,22 @@ export default function OrbitCanvas({ data, onSelectNode }: Props) {
     }
     rafRef.current = requestAnimationFrame(loop)
 
+    // Use getBoundingClientRect to get canvas-relative coordinates
+    const getPos = (clientX: number, clientY: number) => {
+      const rect = cv.getBoundingClientRect()
+      return { x: clientX - rect.left, y: clientY - rect.top }
+    }
+
     const handleMouseMove = (e: MouseEvent) => {
-      const n = nodeAt(e.clientX, e.clientY)
+      const { x, y } = getPos(e.clientX, e.clientY)
+      const n = nodeAt(x, y)
       stateRef.current.hov = n ? n.word : null
       cv.style.cursor = n ? 'pointer' : 'default'
     }
 
     const handleClick = (e: MouseEvent) => {
-      const n = nodeAt(e.clientX, e.clientY)
+      const { x, y } = getPos(e.clientX, e.clientY)
+      const n = nodeAt(x, y)
       if (n) {
         stateRef.current.selW = n.word
         onSelectNode({ w: n.word, h: n.hint, orbitable: n.orbitable })
@@ -343,7 +351,8 @@ export default function OrbitCanvas({ data, onSelectNode }: Props) {
 
     const handleTouch = (e: TouchEvent) => {
       const touch = e.touches[0]
-      const n = nodeAt(touch.clientX, touch.clientY)
+      const { x, y } = getPos(touch.clientX, touch.clientY)
+      const n = nodeAt(x, y)
       if (n) {
         e.preventDefault()
         stateRef.current.selW = n.word
@@ -370,9 +379,11 @@ export default function OrbitCanvas({ data, onSelectNode }: Props) {
   }, [data, initStars, resize, updRT, update, drawStars, drawRings, drawSun, drawNode, nodeAt, onSelectNode])
 
   return (
-    <canvas
-      ref={canvasRef}
-      style={{ position: 'fixed', inset: 0, zIndex: 0 }}
-    />
+    <div style={{ position: 'relative', width: '100%', height: '100%' }}>
+      <canvas
+        ref={canvasRef}
+        style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}
+      />
+    </div>
   )
 }

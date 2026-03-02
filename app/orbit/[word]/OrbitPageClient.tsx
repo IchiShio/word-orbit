@@ -18,27 +18,108 @@ export default function OrbitPageClient({ data }: { data: WordData }) {
   }
 
   return (
-    <div style={{ position: 'relative', width: '100vw', height: '100vh', overflow: 'hidden', background: '#0e0d13' }}>
-      <OrbitCanvas data={data} onSelectNode={setSelectedNode} />
+    <>
+      <style>{`
+        .orbit-root {
+          position: relative;
+          width: 100vw;
+          height: 100dvh;
+          overflow: hidden;
+          background: #0e0d13;
+          display: flex;
+          flex-direction: column;
+        }
+        .orbit-canvas-wrap {
+          position: relative;
+          flex: 1;
+        }
+        /* Desktop overlays */
+        .overlay-info {
+          position: absolute;
+          top: 20px;
+          right: 20px;
+          z-index: 10;
+          max-width: 260px;
+        }
+        .overlay-morpheme {
+          position: absolute;
+          bottom: 48px;
+          left: 20px;
+          z-index: 10;
+        }
+        .overlay-etymology {
+          position: absolute;
+          bottom: 16px;
+          left: 50%;
+          transform: translateX(-50%);
+          font-family: var(--font-ibm-plex-mono);
+          font-size: 9px;
+          color: rgba(173,169,160,0.4);
+          letter-spacing: 0.5px;
+          text-align: center;
+          max-width: 400px;
+          z-index: 10;
+          white-space: nowrap;
+        }
+        /* Mobile bottom panel (hidden on desktop) */
+        .mobile-panel {
+          display: none;
+        }
+        @media (max-width: 640px) {
+          .orbit-canvas-wrap {
+            flex: none;
+            height: 58dvh;
+          }
+          .overlay-info,
+          .overlay-morpheme,
+          .overlay-etymology {
+            display: none;
+          }
+          .mobile-panel {
+            display: block;
+            height: 42dvh;
+            overflow-y: auto;
+            padding: 12px 16px;
+            border-top: 1px solid rgba(255,255,255,0.04);
+          }
+        }
+      `}</style>
 
-      {/* Info panel top-right */}
-      <div style={{ position: 'absolute', top: 20, right: 20, zIndex: 10, maxWidth: 260 }}>
-        <InfoPanel data={data} selectedNode={selectedNode} onSpeak={speak} />
-      </div>
+      <div className="orbit-root">
+        {/* Canvas area */}
+        <div className="orbit-canvas-wrap">
+          <OrbitCanvas data={data} onSelectNode={setSelectedNode} />
 
-      {/* Morpheme equation bottom-left */}
-      <div style={{ position: 'absolute', bottom: 48, left: 20, zIndex: 10 }}>
-        <MorphemeEquation parts={data.parts} />
-      </div>
+          {/* Desktop overlays */}
+          <div className="overlay-info">
+            <InfoPanel data={data} selectedNode={selectedNode} onSpeak={speak} />
+          </div>
+          <div className="overlay-morpheme">
+            <MorphemeEquation parts={data.parts} />
+          </div>
+          <div className="overlay-etymology">
+            {data.etymology}
+          </div>
+        </div>
 
-      {/* Etymology bottom-center */}
-      <div style={{
-        position: 'absolute', bottom: 16, left: '50%', transform: 'translateX(-50%)',
-        fontFamily: 'var(--font-ibm-plex-mono)', fontSize: 9, color: 'rgba(173,169,160,0.4)',
-        letterSpacing: 0.5, textAlign: 'center', maxWidth: 400, zIndex: 10, whiteSpace: 'nowrap',
-      }}>
-        {data.etymology}
+        {/* Mobile bottom panel */}
+        <div className="mobile-panel">
+          <InfoPanel data={data} selectedNode={selectedNode} onSpeak={speak} />
+          <div style={{ marginTop: 10 }}>
+            <MorphemeEquation parts={data.parts} />
+          </div>
+          <div style={{
+            marginTop: 8,
+            fontFamily: 'var(--font-ibm-plex-mono)',
+            fontSize: 9,
+            color: 'rgba(173,169,160,0.4)',
+            letterSpacing: 0.5,
+            lineHeight: 1.5,
+          }}>
+            {data.etymology}
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   )
 }
