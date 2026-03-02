@@ -67,8 +67,8 @@ export default function OrbitCanvas({ data, onSelectNode }: Props) {
   const dprRef = useRef<number>(1)
 
   const updRT = useCallback(() => {
-    const b = Math.min(CWRef.current * 0.44, CHRef.current * 0.40)
-    stateRef.current.ringT = [b * 0.36, b * 0.62, b * 0.86]
+    const b = Math.min(CWRef.current * 0.46, CHRef.current * 0.44)
+    stateRef.current.ringT = [b * 0.50, b * 0.74, b * 0.97]
   }, [])
 
   const resize = useCallback(() => {
@@ -342,7 +342,7 @@ export default function OrbitCanvas({ data, onSelectNode }: Props) {
         : S.ringT[i]
       S.rings[i] += (tgt - S.rings[i]) * 0.12
     }
-    S.sunSc = 0.96 + 0.04 * Math.sin(S.t * 0.002)
+    S.sunSc = 1
     S.fading.forEach(n => { n.op = Math.max(0, n.op - dt * 0.012) })
     if (S.fading.length && S.fading.every(n => n.op <= 0)) S.fading = []
 
