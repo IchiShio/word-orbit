@@ -12,9 +12,8 @@ function NodePopup({ node, parts, onSpeak }: { node: OrbitWord; parts: Part[]; o
   return (
     <div style={{
       position: 'absolute',
-      bottom: '22%',
-      left: '50%',
-      transform: 'translateX(-50%)',
+      bottom: '24px',
+      right: '24px',
       zIndex: 20,
       background: 'rgba(14,13,19,0.92)',
       backdropFilter: 'blur(12px)',
@@ -25,6 +24,7 @@ function NodePopup({ node, parts, onSpeak }: { node: OrbitWord; parts: Part[]; o
       maxWidth: 360,
       pointerEvents: 'auto',
       animation: 'popupIn 0.18s ease-out',
+      animationFillMode: 'both',
     }}>
       {/* Word + speaker */}
       <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
@@ -113,8 +113,8 @@ export default function OrbitPageClient({ data }: { data: WordData }) {
     <>
       <style>{`
         @keyframes popupIn {
-          from { opacity: 0; transform: translateX(-50%) translateY(10px); }
-          to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+          from { opacity: 0; transform: translateY(10px); }
+          to   { opacity: 1; transform: translateY(0); }
         }
         .orbit-root {
           position: relative;
