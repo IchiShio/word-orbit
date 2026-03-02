@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react'
 import type { WordData, OrbitWord, Part } from '@/lib/types'
 import { useRouter } from 'next/navigation'
+import { TYPE_COLORS } from '@/lib/colors'
 
 interface Props {
   data: WordData
@@ -9,11 +10,7 @@ interface Props {
   onSpeak: (word: string) => void
 }
 
-const TYPE_COLOR: Record<string, string> = {
-  root: '#e45852',
-  prefix: '#3ac4ba',
-  suffix: '#9476f0',
-}
+const TYPE_COLOR: Record<string, string> = TYPE_COLORS
 
 function MiniMorpheme({ parts }: { parts: Part[] }) {
   if (!parts.length) return null
@@ -95,9 +92,9 @@ export default function InfoPanel({ data, selectedNode, onSpeak }: Props) {
 
       {/* Legend */}
       <div style={{ display: 'flex', gap: 12, fontSize: 7, color: 'rgba(173,169,160,0.5)', letterSpacing: 1, marginTop: 6, justifyContent: 'flex-end', fontFamily: "'IBM Plex Mono', monospace" }}>
-        <span><i style={{ display: 'inline-block', width: 5, height: 5, borderRadius: '50%', background: '#e4585d', marginRight: 3, verticalAlign: 'middle' }} />ROOT</span>
-        <span><i style={{ display: 'inline-block', width: 5, height: 5, borderRadius: '50%', background: '#3ac4ba', marginRight: 3, verticalAlign: 'middle' }} />PREFIX</span>
-        <span><i style={{ display: 'inline-block', width: 5, height: 5, borderRadius: '50%', background: '#9476f0', marginRight: 3, verticalAlign: 'middle' }} />SUFFIX</span>
+        <span><i style={{ display: 'inline-block', width: 5, height: 5, borderRadius: '50%', background: TYPE_COLORS.root, marginRight: 3, verticalAlign: 'middle' }} />ROOT</span>
+        <span><i style={{ display: 'inline-block', width: 5, height: 5, borderRadius: '50%', background: TYPE_COLORS.prefix, marginRight: 3, verticalAlign: 'middle' }} />PREFIX</span>
+        <span><i style={{ display: 'inline-block', width: 5, height: 5, borderRadius: '50%', background: TYPE_COLORS.suffix, marginRight: 3, verticalAlign: 'middle' }} />SUFFIX</span>
       </div>
     </div>
   )

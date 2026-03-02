@@ -1,8 +1,9 @@
 'use client'
 import { useRef, useEffect, useCallback } from 'react'
 import type { WordData, OrbitWord } from '@/lib/types'
+import { ORBIT_COLORS } from '@/lib/colors'
 
-const OC = ['#e4585d', '#3ac4ba', '#9476f0']
+const OC = ORBIT_COLORS
 const TYPES = ['root', 'prefix', 'suffix'] as const
 
 interface CanvasNode {

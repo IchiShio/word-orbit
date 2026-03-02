@@ -1,16 +1,6 @@
 'use client'
 import type { Part } from '@/lib/types'
-
-const TYPE_COLORS: Record<string, string> = {
-  root: '#e45852',
-  prefix: '#3ac4ba',
-  suffix: '#9476f0',
-}
-const TYPE_BG: Record<string, string> = {
-  root: 'rgba(228,88,82,0.06)',
-  prefix: 'rgba(58,196,186,0.06)',
-  suffix: 'rgba(148,118,240,0.06)',
-}
+import { TYPE_COLORS } from '@/lib/colors'
 
 interface Props {
   parts: Part[]
@@ -22,16 +12,20 @@ export default function MorphemeEquation({ parts }: Props) {
       {parts.map((p, i) => (
         <div key={i} className="flex items-center">
           {i > 0 && (
-            <span style={{ fontFamily: "'Fraunces', serif", fontSize: 18, color: '#2e2d3a', padding: '0 3px', fontWeight: 300 }}>
+            <span style={{ fontFamily: "'Fraunces', serif", fontSize: 18, color: 'rgba(173,169,160,0.35)', padding: '0 3px', fontWeight: 300 }}>
               +
             </span>
           )}
-          <div
-            style={{ backgroundColor: TYPE_BG[p.type], textAlign: 'center', padding: '5px 12px', borderRadius: 5 }}
-          >
-            <div style={{ fontSize: 14, fontWeight: 500, color: '#ada9a0', fontFamily: "'IBM Plex Mono', monospace" }}>{p.t}</div>
-            <div style={{ fontFamily: "'Fraunces', serif", fontSize: 26, fontWeight: 300, fontStyle: 'italic', lineHeight: 1.1, color: TYPE_COLORS[p.type] }}>{p.m}</div>
-            <div style={{ fontSize: 6, letterSpacing: 2, textTransform: 'uppercase', color: '#2e2d3a', marginTop: 2, fontFamily: "'IBM Plex Mono', monospace" }}>{p.type}</div>
+          <div style={{
+            backgroundColor: `${TYPE_COLORS[p.type]}14`,
+            border: `1px solid ${TYPE_COLORS[p.type]}30`,
+            textAlign: 'center',
+            padding: '5px 12px',
+            borderRadius: 5,
+          }}>
+            <div style={{ fontSize: 7, letterSpacing: 2, textTransform: 'uppercase', color: TYPE_COLORS[p.type], opacity: 0.7, marginBottom: 2, fontFamily: "'IBM Plex Mono', monospace" }}>{p.type}</div>
+            <div style={{ fontSize: 14, fontWeight: 600, color: TYPE_COLORS[p.type], fontFamily: "'IBM Plex Mono', monospace" }}>{p.t}</div>
+            <div style={{ fontFamily: "'Fraunces', serif", fontSize: 22, fontWeight: 300, fontStyle: 'italic', lineHeight: 1.1, color: '#c8c5bc' }}>{p.m}</div>
           </div>
         </div>
       ))}
