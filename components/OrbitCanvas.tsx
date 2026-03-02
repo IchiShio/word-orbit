@@ -201,10 +201,43 @@ export default function OrbitCanvas({ data, onSelectNode }: Props) {
     ctx.fillStyle = '#efd64c'
     ctx.textAlign = 'center'
     ctx.fillText(stateRef.current.cur, CX, CY + 26 * sc)
-    if (wd) {
+
+    if (wd && wd.parts.length) {
+      const parts = wd.parts
+      const yNames = CY + 42 * sc
+      const yMeans = CY + 55 * sc
+      const sep = '  ·  '
+
+      // Line 1: morpheme names, each colored by type
+      ctx.font = '600 9px "IBM Plex Mono"'
+      const sepW = ctx.measureText(sep).width
+      let totalW = 0
+      parts.forEach((p, i) => {
+        if (i > 0) totalW += sepW
+        totalW += ctx.measureText(p.t).width
+      })
+      let x = CX - totalW / 2
+      ctx.textAlign = 'left'
+      parts.forEach((p, i) => {
+        if (i > 0) {
+          ctx.globalAlpha = sc * 0.25
+          ctx.fillStyle = '#ada9a0'
+          ctx.fillText(sep, x, yNames)
+          x += sepW
+        }
+        const ti = TYPES.indexOf(p.type as typeof TYPES[number])
+        ctx.globalAlpha = sc * 0.9
+        ctx.fillStyle = ti >= 0 ? OC[ti] : '#ada9a0'
+        ctx.fillText(p.t, x, yNames)
+        x += ctx.measureText(p.t).width
+      })
+
+      // Line 2: meanings in soft grey, centered
       ctx.font = '300 9px "IBM Plex Mono"'
-      ctx.fillStyle = 'rgba(173,169,160,0.5)'
-      ctx.fillText(wd.parts.map(p => p.t).join(' · '), CX, CY + 38 * sc)
+      ctx.globalAlpha = sc * 0.55
+      ctx.fillStyle = '#ada9a0'
+      ctx.textAlign = 'center'
+      ctx.fillText(parts.map(p => p.m).join('  ·  '), CX, yMeans)
     }
     ctx.globalAlpha = 1
   }, [])
