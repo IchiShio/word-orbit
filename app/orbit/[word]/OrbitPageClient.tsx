@@ -156,6 +156,7 @@ export default function OrbitPageClient({ data }: { data: WordData }) {
           .orbit-root { flex-direction: column; }
           .orbit-canvas-wrap { flex: none; height: 58dvh; }
           .desktop-sidebar { display: none; }
+          .node-popup-wrap { display: none; }
           .mobile-panel {
             display: block;
             height: 42dvh;
@@ -171,9 +172,11 @@ export default function OrbitPageClient({ data }: { data: WordData }) {
         <div className="orbit-canvas-wrap">
           <OrbitCanvas data={data} onSelectNode={setSelectedNode} />
 
-          {/* Node popup — appears above pinned node at bottom-center */}
+          {/* Node popup — desktop only */}
           {selectedNode && (
-            <NodePopup key={selectedNode.w} node={selectedNode} parts={nodeParts} onSpeak={speak} />
+            <div className="node-popup-wrap">
+              <NodePopup key={selectedNode.w} node={selectedNode} parts={nodeParts} onSpeak={speak} />
+            </div>
           )}
         </div>
 
@@ -184,9 +187,9 @@ export default function OrbitPageClient({ data }: { data: WordData }) {
           <div className="desktop-etymology">{data.etymology}</div>
         </div>
 
-        {/* Mobile bottom panel — main word + etymology */}
+        {/* Mobile bottom panel — main word + selected node info */}
         <div className="mobile-panel">
-          <InfoPanel data={data} selectedNode={null} nodeParts={[]} onSpeak={speak} />
+          <InfoPanel data={data} selectedNode={selectedNode} nodeParts={nodeParts} onSpeak={speak} />
           <div style={{ marginTop: 10, fontFamily: 'var(--font-ibm-plex-mono)', fontSize: 9, color: 'rgba(173,169,160,0.4)', letterSpacing: 0.5, lineHeight: 1.5 }}>
             {data.etymology}
           </div>
