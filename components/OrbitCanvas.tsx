@@ -25,6 +25,7 @@ interface CanvasState {
   cur: string
   hov: string | null
   selW: string | null
+  selRing: number | null
   nodes: CanvasNode[]
   fading: CanvasNode[]
   rings: [number, number, number]
@@ -46,6 +47,7 @@ export default function OrbitCanvas({ data, onSelectNode }: Props) {
     cur: data.word,
     hov: null,
     selW: null,
+    selRing: null,
     nodes: [],
     fading: [],
     rings: [0, 0, 0],
@@ -111,16 +113,19 @@ export default function OrbitCanvas({ data, onSelectNode }: Props) {
 
   const drawRings = useCallback((ctx: CanvasRenderingContext2D) => {
     const wd = stateRef.current.CWD
+    const selRing = stateRef.current.selRing
     if (!wd) return
     const CX = CXRef.current, CY = CYRef.current
     for (let i = 0; i < 3; i++) {
       const r = stateRef.current.rings[i]
       if (r < 3) continue
+      const isFocused = selRing === null || i === selRing
+      const dim = isFocused ? 1 : 0.15
       const orbitKey = TYPES[i]
       const has = wd.orbits[orbitKey] && wd.orbits[orbitKey].length > 0
       ctx.strokeStyle = OC[i]
-      ctx.globalAlpha = has ? 0.12 : 0.02
-      ctx.lineWidth = 1
+      ctx.globalAlpha = has ? 0.12 * dim : 0.02 * dim
+      ctx.lineWidth = isFocused ? 1 : 0.5
       ctx.setLineDash([3, 6])
       ctx.beginPath()
       ctx.arc(CX, CY, r, 0, 6.283)
@@ -139,7 +144,7 @@ export default function OrbitCanvas({ data, onSelectNode }: Props) {
           const radius = 8
 
           // Draw pill background
-          ctx.globalAlpha = 0.15
+          ctx.globalAlpha = 0.15 * dim
           ctx.fillStyle = OC[i]
           ctx.beginPath()
           ctx.moveTo(pillX + radius, pillY)
@@ -155,13 +160,13 @@ export default function OrbitCanvas({ data, onSelectNode }: Props) {
           ctx.fill()
 
           // Draw pill stroke
-          ctx.globalAlpha = 0.35
+          ctx.globalAlpha = 0.35 * dim
           ctx.strokeStyle = OC[i]
           ctx.lineWidth = 0.75
           ctx.stroke()
 
           // Draw label text inside pill
-          ctx.globalAlpha = 0.8
+          ctx.globalAlpha = 0.8 * dim
           ctx.fillStyle = OC[i]
           ctx.textAlign = 'center'
           ctx.fillText(label, CX, pillY + pillH - 4)
@@ -239,13 +244,15 @@ export default function OrbitCanvas({ data, onSelectNode }: Props) {
     const S = stateRef.current
     const isH = S.hov === n.word
     const isS = S.selW === n.word
-    const a = n.op * (fading ? 0.35 : 1)
+    const isFocused = fading || S.selRing === null || n.ring === S.selRing
+    const dim = isFocused ? 1 : 0.2
+    const a = n.op * (fading ? 0.35 : dim)
     if (a < 0.01) return
 
     if ((isH || isS) && !fading) drawConn(ctx, n)
 
     const f = 0.7
-    const baseR = 6 + f * 6
+    const baseR = (6 + f * 6) * (isFocused ? 1 : 0.55)
     const r = baseR * (isH ? 1.25 : 1)
 
     ctx.globalAlpha = a
@@ -267,15 +274,17 @@ export default function OrbitCanvas({ data, onSelectNode }: Props) {
     }
 
     ctx.globalAlpha = a
-    ctx.font = `${isH ? '700' : '700'} 13px "IBM Plex Mono"`
-    ctx.fillStyle = isH || isS ? '#efd64c' : '#f0ede8'
+    ctx.font = `700 ${isFocused ? 13 : 11}px "IBM Plex Mono"`
+    ctx.fillStyle = isH || isS ? '#efd64c' : (isFocused ? '#f0ede8' : '#ada9a0')
     ctx.textAlign = 'center'
     ctx.fillText(n.word, n.x, n.y + r + 14)
 
-    ctx.font = 'italic 300 10px "Fraunces"'
-    ctx.globalAlpha = a * (isH ? 0.7 : 0.35)
-    ctx.fillStyle = isH ? '#efd64c' : '#ada9a0'
-    ctx.fillText(n.hint, n.x, n.y + r + 27)
+    if (isFocused) {
+      ctx.font = 'italic 300 10px "Fraunces"'
+      ctx.globalAlpha = a * (isH ? 0.7 : 0.35)
+      ctx.fillStyle = isH ? '#efd64c' : '#ada9a0'
+      ctx.fillText(n.hint, n.x, n.y + r + 27)
+    }
     ctx.globalAlpha = 1
   }, [drawConn])
 
@@ -283,7 +292,22 @@ export default function OrbitCanvas({ data, onSelectNode }: Props) {
     const S = stateRef.current
     const CX = CXRef.current, CY = CYRef.current
     S.t += dt
-    for (let i = 0; i < 3; i++) S.rings[i] += (S.ringT[i] - S.rings[i]) * 0.18
+
+    // Detect focused ring from selected word
+    if (S.selW) {
+      const sn = S.nodes.find(n => n.word === S.selW)
+      S.selRing = sn !== undefined ? sn.ring : null
+    } else {
+      S.selRing = null
+    }
+
+    // Animate rings: expand focused ring, contract others
+    for (let i = 0; i < 3; i++) {
+      const tgt = S.selRing !== null
+        ? (i === S.selRing ? S.ringT[i] * 1.5 : S.ringT[i] * 0.48)
+        : S.ringT[i]
+      S.rings[i] += (tgt - S.rings[i]) * 0.12
+    }
     S.sunSc = 0.96 + 0.04 * Math.sin(S.t * 0.002)
     S.fading.forEach(n => { n.op = Math.max(0, n.op - dt * 0.012) })
     if (S.fading.length && S.fading.every(n => n.op <= 0)) S.fading = []
@@ -337,6 +361,7 @@ export default function OrbitCanvas({ data, onSelectNode }: Props) {
     S.nodes = []
     S.hov = null
     S.selW = null
+    S.selRing = null
     S.rings = [0, 0, 0]
     S.cur = data.word
     S.CWD = data
