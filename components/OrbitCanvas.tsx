@@ -68,7 +68,7 @@ export default function OrbitCanvas({ data, onSelectNode }: Props) {
 
   const updRT = useCallback(() => {
     const b = Math.min(CWRef.current * 0.46, CHRef.current * 0.44)
-    stateRef.current.ringT = [b * 0.50, b * 0.74, b * 0.97]
+    stateRef.current.ringT = [b * 0.50, b * 0.73, b * 0.88]
   }, [])
 
   const resize = useCallback(() => {
