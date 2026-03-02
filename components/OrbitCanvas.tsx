@@ -139,10 +139,10 @@ export default function OrbitCanvas({ data, onSelectNode, selParts }: Props) {
         const pt = wd.parts.find(p => p.type === TYPES[i])
         if (pt) {
           const label = `${pt.type.toUpperCase()} · ${pt.t}`
-          ctx.font = '600 10px "IBM Plex Mono"'
+          ctx.font = '600 13px "IBM Plex Mono"'
           const textW = ctx.measureText(label).width
-          const pillW = textW + 16
-          const pillH = 16
+          const pillW = textW + 20
+          const pillH = 20
           const pillX = CX - pillW / 2
           const pillY = CY - r - 8 - pillH
           const radius = 8
@@ -173,7 +173,7 @@ export default function OrbitCanvas({ data, onSelectNode, selParts }: Props) {
           ctx.globalAlpha = 0.8 * dim
           ctx.fillStyle = OC[i]
           ctx.textAlign = 'center'
-          ctx.fillText(label, CX, pillY + pillH - 4)
+          ctx.fillText(label, CX, pillY + pillH - 5)
         }
       }
     }
@@ -201,19 +201,19 @@ export default function OrbitCanvas({ data, onSelectNode, selParts }: Props) {
     ctx.arc(CX, CY, 9 * sc, 0, 6.283)
     ctx.fill()
     ctx.globalAlpha = sc
-    ctx.font = '300 20px "Fraunces"'
+    ctx.font = '300 32px "Fraunces"'
     ctx.fillStyle = '#efd64c'
     ctx.textAlign = 'center'
-    ctx.fillText(stateRef.current.cur, CX, CY + 26 * sc)
+    ctx.fillText(stateRef.current.cur, CX, CY + 36 * sc)
 
     if (wd && wd.parts.length) {
       const parts = wd.parts
-      const yNames = CY + 42 * sc
-      const yMeans = CY + 55 * sc
+      const yNames = CY + 56 * sc
+      const yMeans = CY + 72 * sc
       const sep = '  ·  '
 
       // Line 1: morpheme names, each colored by type
-      ctx.font = '600 11px "IBM Plex Mono"'
+      ctx.font = '600 16px "IBM Plex Mono"'
       const sepW = ctx.measureText(sep).width
       let totalW = 0
       parts.forEach((p, i) => {
@@ -237,7 +237,7 @@ export default function OrbitCanvas({ data, onSelectNode, selParts }: Props) {
       })
 
       // Line 2: meanings in grey, centered
-      ctx.font = '400 10px "IBM Plex Mono"'
+      ctx.font = '400 13px "IBM Plex Mono"'
       ctx.globalAlpha = sc * 0.85
       ctx.fillStyle = '#c8c5bc'
       ctx.textAlign = 'center'
@@ -265,13 +265,13 @@ export default function OrbitCanvas({ data, onSelectNode, selParts }: Props) {
         const mx = (CX + n.x * 2) / 3
         const my = (CY + n.y * 2) / 3
         ctx.globalAlpha = 0.7
-        ctx.font = 'italic 300 11px "Fraunces"'
+        ctx.font = 'italic 300 14px "Fraunces"'
         ctx.fillStyle = n.col
         ctx.textAlign = 'center'
         ctx.fillText(pt.m, mx, my - 3)
-        ctx.font = '400 8px "IBM Plex Mono"'
+        ctx.font = '400 10px "IBM Plex Mono"'
         ctx.globalAlpha = 0.5
-        ctx.fillText(pt.t, mx, my + 9)
+        ctx.fillText(pt.t, mx, my + 12)
       }
     }
     ctx.restore()
@@ -311,16 +311,16 @@ export default function OrbitCanvas({ data, onSelectNode, selParts }: Props) {
     }
 
     ctx.globalAlpha = a
-    ctx.font = `700 ${isFocused ? 13 : 11}px "IBM Plex Mono"`
+    ctx.font = `700 ${isFocused ? 16 : 12}px "IBM Plex Mono"`
     ctx.fillStyle = isH || isS ? '#efd64c' : (isFocused ? '#f0ede8' : '#ada9a0')
     ctx.textAlign = 'center'
-    ctx.fillText(n.word, n.x, n.y + r + 14)
+    ctx.fillText(n.word, n.x, n.y + r + 18)
 
     if (isFocused) {
-      ctx.font = 'italic 300 10px "Fraunces"'
+      ctx.font = 'italic 300 12px "Fraunces"'
       ctx.globalAlpha = a * (isH ? 0.7 : 0.35)
       ctx.fillStyle = isH ? '#efd64c' : '#ada9a0'
-      ctx.fillText(n.hint, n.x, n.y + r + 27)
+      ctx.fillText(n.hint, n.x, n.y + r + 33)
     }
     ctx.globalAlpha = 1
   }, [drawConn])

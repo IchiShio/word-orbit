@@ -45,7 +45,7 @@ export default function OrbitPageClient({ data }: { data: WordData }) {
         }
         /* Desktop sidebar */
         .desktop-sidebar {
-          width: 320px;
+          width: 360px;
           flex-shrink: 0;
           padding: 28px 24px;
           overflow-y: auto;
