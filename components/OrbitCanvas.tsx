@@ -1,6 +1,6 @@
 'use client'
 import { useRef, useEffect, useCallback } from 'react'
-import type { WordData, OrbitWord, Part } from '@/lib/types'
+import type { WordData, OrbitWord } from '@/lib/types'
 import { ORBIT_COLORS } from '@/lib/colors'
 
 const OC = ORBIT_COLORS
