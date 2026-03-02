@@ -83,7 +83,7 @@ export default function OrbitCanvas({ data, onSelectNode }: Props) {
     const ctx = cv.getContext('2d')!
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0)
     CXRef.current = w / 2
-    CYRef.current = h * 0.42
+    CYRef.current = h * 0.45
     updRT()
   }, [updRT])
 
@@ -119,7 +119,7 @@ export default function OrbitCanvas({ data, onSelectNode }: Props) {
       const orbitKey = TYPES[i]
       const has = wd.orbits[orbitKey] && wd.orbits[orbitKey].length > 0
       ctx.strokeStyle = OC[i]
-      ctx.globalAlpha = has ? 0.08 : 0.02
+      ctx.globalAlpha = has ? 0.12 : 0.02
       ctx.lineWidth = 1
       ctx.setLineDash([3, 6])
       ctx.beginPath()
@@ -129,11 +129,42 @@ export default function OrbitCanvas({ data, onSelectNode }: Props) {
       if (has) {
         const pt = wd.parts.find(p => p.type === TYPES[i])
         if (pt) {
-          ctx.globalAlpha = 0.6
-          ctx.font = '500 10px "IBM Plex Mono"'
+          const label = `${pt.type.toUpperCase()} · ${pt.t}`
+          ctx.font = '600 10px "IBM Plex Mono"'
+          const textW = ctx.measureText(label).width
+          const pillW = textW + 16
+          const pillH = 16
+          const pillX = CX - pillW / 2
+          const pillY = CY - r - 8 - pillH
+          const radius = 8
+
+          // Draw pill background
+          ctx.globalAlpha = 0.15
+          ctx.fillStyle = OC[i]
+          ctx.beginPath()
+          ctx.moveTo(pillX + radius, pillY)
+          ctx.lineTo(pillX + pillW - radius, pillY)
+          ctx.arcTo(pillX + pillW, pillY, pillX + pillW, pillY + pillH, radius)
+          ctx.lineTo(pillX + pillW, pillY + pillH - radius)
+          ctx.arcTo(pillX + pillW, pillY + pillH, pillX + pillW - radius, pillY + pillH, radius)
+          ctx.lineTo(pillX + radius, pillY + pillH)
+          ctx.arcTo(pillX, pillY + pillH, pillX, pillY + pillH - radius, radius)
+          ctx.lineTo(pillX, pillY + radius)
+          ctx.arcTo(pillX, pillY, pillX + radius, pillY, radius)
+          ctx.closePath()
+          ctx.fill()
+
+          // Draw pill stroke
+          ctx.globalAlpha = 0.35
+          ctx.strokeStyle = OC[i]
+          ctx.lineWidth = 0.75
+          ctx.stroke()
+
+          // Draw label text inside pill
+          ctx.globalAlpha = 0.8
           ctx.fillStyle = OC[i]
           ctx.textAlign = 'center'
-          ctx.fillText(`${pt.type}: ${pt.t}`.toUpperCase(), CX, CY - r - 7)
+          ctx.fillText(label, CX, pillY + pillH - 4)
         }
       }
     }
@@ -161,14 +192,14 @@ export default function OrbitCanvas({ data, onSelectNode }: Props) {
     ctx.arc(CX, CY, 9 * sc, 0, 6.283)
     ctx.fill()
     ctx.globalAlpha = sc
-    ctx.font = '300 16px "Fraunces"'
+    ctx.font = '300 20px "Fraunces"'
     ctx.fillStyle = '#efd64c'
     ctx.textAlign = 'center'
     ctx.fillText(stateRef.current.cur, CX, CY + 26 * sc)
     if (wd) {
-      ctx.font = '300 8px "IBM Plex Mono"'
-      ctx.fillStyle = '#2e2d3a'
-      ctx.fillText(wd.parts.map(p => p.t).join(' · '), CX, CY + 37 * sc)
+      ctx.font = '300 9px "IBM Plex Mono"'
+      ctx.fillStyle = 'rgba(173,169,160,0.5)'
+      ctx.fillText(wd.parts.map(p => p.t).join(' · '), CX, CY + 38 * sc)
     }
     ctx.globalAlpha = 1
   }, [])
@@ -177,9 +208,9 @@ export default function OrbitCanvas({ data, onSelectNode }: Props) {
     const CX = CXRef.current, CY = CYRef.current
     const wd = stateRef.current.CWD
     ctx.save()
-    ctx.globalAlpha = 0.35
+    ctx.globalAlpha = 0.5
     ctx.strokeStyle = n.col
-    ctx.lineWidth = 0.5
+    ctx.lineWidth = 0.8
     ctx.setLineDash([1, 4])
     ctx.beginPath()
     ctx.moveTo(CX, CY)
@@ -191,14 +222,14 @@ export default function OrbitCanvas({ data, onSelectNode }: Props) {
       if (pt) {
         const mx = (CX + n.x * 2) / 3
         const my = (CY + n.y * 2) / 3
-        ctx.globalAlpha = 0.5
-        ctx.font = 'italic 300 10px "Fraunces"'
+        ctx.globalAlpha = 0.7
+        ctx.font = 'italic 300 11px "Fraunces"'
         ctx.fillStyle = n.col
         ctx.textAlign = 'center'
         ctx.fillText(pt.m, mx, my - 3)
-        ctx.font = '400 7px "IBM Plex Mono"'
-        ctx.globalAlpha = 0.3
-        ctx.fillText(pt.t, mx, my + 8)
+        ctx.font = '400 8px "IBM Plex Mono"'
+        ctx.globalAlpha = 0.5
+        ctx.fillText(pt.t, mx, my + 9)
       }
     }
     ctx.restore()
@@ -214,13 +245,13 @@ export default function OrbitCanvas({ data, onSelectNode }: Props) {
     if ((isH || isS) && !fading) drawConn(ctx, n)
 
     const f = 0.7
-    const baseR = 5 + f * 5
+    const baseR = 6 + f * 6
     const r = baseR * (isH ? 1.25 : 1)
 
     ctx.globalAlpha = a
     const dg = ctx.createRadialGradient(n.x, n.y, 0, n.x, n.y, r)
-    dg.addColorStop(0, '#fffef0')
-    dg.addColorStop(0.3, n.col)
+    dg.addColorStop(0, '#ffffff')
+    dg.addColorStop(0.4, n.col)
     dg.addColorStop(1, n.col + '00')
     ctx.fillStyle = dg
     ctx.beginPath()
@@ -228,21 +259,21 @@ export default function OrbitCanvas({ data, onSelectNode }: Props) {
     ctx.fill()
 
     if (isH || isS) {
-      ctx.globalAlpha = 0.08 * a
+      ctx.globalAlpha = 0.15 * a
       ctx.fillStyle = n.col
       ctx.beginPath()
-      ctx.arc(n.x, n.y, 20, 0, 6.283)
+      ctx.arc(n.x, n.y, 24, 0, 6.283)
       ctx.fill()
     }
 
     ctx.globalAlpha = a
-    ctx.font = `${isH ? '600' : '500'} ${isH ? 13 : 12}px "IBM Plex Mono"`
-    ctx.fillStyle = isH || isS ? '#efd64c' : '#ada9a0'
+    ctx.font = `${isH ? '700' : '700'} 13px "IBM Plex Mono"`
+    ctx.fillStyle = isH || isS ? '#efd64c' : '#f0ede8'
     ctx.textAlign = 'center'
     ctx.fillText(n.word, n.x, n.y + r + 14)
 
     ctx.font = 'italic 300 10px "Fraunces"'
-    ctx.globalAlpha = a * (isH ? 0.8 : 0.3)
+    ctx.globalAlpha = a * (isH ? 0.7 : 0.35)
     ctx.fillStyle = isH ? '#efd64c' : '#ada9a0'
     ctx.fillText(n.hint, n.x, n.y + r + 27)
     ctx.globalAlpha = 1
