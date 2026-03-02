@@ -40,10 +40,9 @@ interface CanvasState {
 interface Props {
   data: WordData
   onSelectNode: (node: OrbitWord | null) => void
-  selParts: Part[]
 }
 
-export default function OrbitCanvas({ data, onSelectNode, selParts }: Props) {
+export default function OrbitCanvas({ data, onSelectNode }: Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const stateRef = useRef<CanvasState>({
     cur: data.word,
@@ -66,9 +65,6 @@ export default function OrbitCanvas({ data, onSelectNode, selParts }: Props) {
   const CXRef = useRef<number>(0)
   const CYRef = useRef<number>(0)
   const dprRef = useRef<number>(1)
-  const selPartsRef = useRef<Part[]>([])
-  selPartsRef.current = selParts
-
   const updRT = useCallback(() => {
     const b = Math.min(CWRef.current * 0.46, CHRef.current * 0.44)
     stateRef.current.ringT = [b * 0.40, b * 0.54, b * 0.65]
@@ -249,29 +245,45 @@ export default function OrbitCanvas({ data, onSelectNode, selParts }: Props) {
   const drawConn = useCallback((ctx: CanvasRenderingContext2D, n: CanvasNode) => {
     const CX = CXRef.current, CY = CYRef.current
     const wd = stateRef.current.CWD
+    const isS = stateRef.current.selW === n.word
     ctx.save()
-    ctx.globalAlpha = 0.5
-    ctx.strokeStyle = n.col
-    ctx.lineWidth = 0.8
-    ctx.setLineDash([1, 4])
-    ctx.beginPath()
-    ctx.moveTo(CX, CY)
-    ctx.lineTo(n.x, n.y)
-    ctx.stroke()
-    ctx.setLineDash([])
+    if (isS) {
+      // Obsidian-style: glowing solid line
+      ctx.shadowBlur = 18
+      ctx.shadowColor = n.col
+      ctx.globalAlpha = 0.85
+      ctx.strokeStyle = n.col
+      ctx.lineWidth = 2
+      ctx.setLineDash([])
+      ctx.beginPath()
+      ctx.moveTo(CX, CY)
+      ctx.lineTo(n.x, n.y)
+      ctx.stroke()
+      ctx.shadowBlur = 0
+    } else {
+      ctx.globalAlpha = 0.4
+      ctx.strokeStyle = n.col
+      ctx.lineWidth = 0.8
+      ctx.setLineDash([1, 4])
+      ctx.beginPath()
+      ctx.moveTo(CX, CY)
+      ctx.lineTo(n.x, n.y)
+      ctx.stroke()
+      ctx.setLineDash([])
+    }
     if (wd) {
       const pt = wd.parts.find(p => p.type === TYPES[n.ring])
       if (pt) {
         const mx = (CX + n.x * 2) / 3
         const my = (CY + n.y * 2) / 3
-        ctx.globalAlpha = 0.7
-        ctx.font = 'italic 300 14px "Fraunces"'
+        ctx.globalAlpha = isS ? 0.9 : 0.65
+        ctx.font = `italic 300 ${isS ? 17 : 14}px "Fraunces"`
         ctx.fillStyle = n.col
         ctx.textAlign = 'center'
         ctx.fillText(pt.m, mx, my - 3)
-        ctx.font = '400 10px "IBM Plex Mono"'
-        ctx.globalAlpha = 0.5
-        ctx.fillText(pt.t, mx, my + 12)
+        ctx.font = `400 ${isS ? 12 : 10}px "IBM Plex Mono"`
+        ctx.globalAlpha = isS ? 0.75 : 0.5
+        ctx.fillText(pt.t, mx, my + (isS ? 15 : 12))
       }
     }
     ctx.restore()
@@ -282,15 +294,44 @@ export default function OrbitCanvas({ data, onSelectNode, selParts }: Props) {
     const isH = S.hov === n.word
     const isS = S.selW === n.word
     const isFocused = fading || S.selRing === null || n.ring === S.selRing
-    const dim = isFocused ? 1 : 0.2
+    const dim = isFocused ? 1 : 0.12
     const a = n.op * (fading ? 0.35 : dim)
     if (a < 0.01) return
 
     if ((isH || isS) && !fading) drawConn(ctx, n)
 
     const f = 0.7
-    const baseR = (6 + f * 6) * (isFocused ? 1 : 0.55)
-    const r = baseR * (isH ? 1.25 : 1)
+    const baseR = (6 + f * 6) * (isFocused ? 1 : 0.5)
+    const r = baseR * (isS ? 1.5 : isH ? 1.3 : 1)
+
+    // Obsidian-style: multi-layer glow for selected node
+    if (isS && !fading) {
+      const pulse = 0.5 + 0.5 * Math.sin(S.t * 0.003)
+      // Outermost soft pulse
+      ctx.globalAlpha = (0.07 + 0.07 * pulse) * n.op
+      ctx.fillStyle = n.col
+      ctx.beginPath()
+      ctx.arc(n.x, n.y, 50 + 8 * pulse, 0, 6.283)
+      ctx.fill()
+      // Mid glow
+      ctx.globalAlpha = 0.16 * n.op
+      ctx.fillStyle = n.col
+      ctx.beginPath()
+      ctx.arc(n.x, n.y, 30, 0, 6.283)
+      ctx.fill()
+      // Inner bright ring
+      ctx.globalAlpha = 0.3 * n.op
+      ctx.fillStyle = n.col
+      ctx.beginPath()
+      ctx.arc(n.x, n.y, 18, 0, 6.283)
+      ctx.fill()
+    } else if (isH && !fading) {
+      ctx.globalAlpha = 0.15 * a
+      ctx.fillStyle = n.col
+      ctx.beginPath()
+      ctx.arc(n.x, n.y, 24, 0, 6.283)
+      ctx.fill()
+    }
 
     ctx.globalAlpha = a
     const dg = ctx.createRadialGradient(n.x, n.y, 0, n.x, n.y, r)
@@ -302,88 +343,23 @@ export default function OrbitCanvas({ data, onSelectNode, selParts }: Props) {
     ctx.arc(n.x, n.y, r, 0, 6.283)
     ctx.fill()
 
-    if (isH || isS) {
-      ctx.globalAlpha = 0.15 * a
-      ctx.fillStyle = n.col
-      ctx.beginPath()
-      ctx.arc(n.x, n.y, 24, 0, 6.283)
-      ctx.fill()
-    }
-
     ctx.globalAlpha = a
-    ctx.font = `700 ${isFocused ? 16 : 12}px "IBM Plex Mono"`
+    const labelSize = isS ? 18 : (isFocused ? 16 : 12)
+    ctx.font = `700 ${labelSize}px "IBM Plex Mono"`
     ctx.fillStyle = isH || isS ? '#efd64c' : (isFocused ? '#f0ede8' : '#ada9a0')
     ctx.textAlign = 'center'
-    ctx.fillText(n.word, n.x, n.y + r + 18)
+    const labelY = n.y + r + (isS ? 22 : 18)
+    ctx.fillText(n.word, n.x, labelY)
 
     if (isFocused) {
-      ctx.font = 'italic 300 12px "Fraunces"'
-      ctx.globalAlpha = a * (isH ? 0.7 : 0.35)
-      ctx.fillStyle = isH ? '#efd64c' : '#ada9a0'
-      ctx.fillText(n.hint, n.x, n.y + r + 33)
+      ctx.font = `italic 300 ${isS ? 14 : 12}px "Fraunces"`
+      ctx.globalAlpha = a * (isH || isS ? 0.85 : 0.35)
+      ctx.fillStyle = isH || isS ? '#efd64c' : '#ada9a0'
+      ctx.fillText(n.hint, n.x, labelY + (isS ? 20 : 16))
     }
     ctx.globalAlpha = 1
   }, [drawConn])
 
-  const drawSelInfo = useCallback((ctx: CanvasRenderingContext2D) => {
-    const S = stateRef.current
-    const parts = selPartsRef.current
-    if (!S.selW || !parts.length) return
-    const CX = CXRef.current
-    const CH = CHRef.current
-    const sep = '  ·  '
-    const yWord  = CH - 52
-    const yNames = CH - 34
-    const yMeans = CH - 18
-
-    // Thin separator line
-    ctx.globalAlpha = 0.1
-    ctx.strokeStyle = '#ada9a0'
-    ctx.lineWidth = 0.5
-    ctx.beginPath()
-    ctx.moveTo(CX - 90, CH - 64)
-    ctx.lineTo(CX + 90, CH - 64)
-    ctx.stroke()
-
-    // Selected word name
-    ctx.globalAlpha = 0.9
-    ctx.font = '400 11px "IBM Plex Mono"'
-    ctx.fillStyle = '#efd64c'
-    ctx.textAlign = 'center'
-    ctx.fillText(S.selW, CX, yWord)
-
-    // Line 1: colored morpheme names
-    ctx.font = '600 10px "IBM Plex Mono"'
-    const sepW = ctx.measureText(sep).width
-    let totalW = 0
-    parts.forEach((p, i) => {
-      if (i > 0) totalW += sepW
-      totalW += ctx.measureText(p.t).width
-    })
-    let x = CX - totalW / 2
-    ctx.textAlign = 'left'
-    parts.forEach((p, i) => {
-      if (i > 0) {
-        ctx.globalAlpha = 0.35
-        ctx.fillStyle = '#ada9a0'
-        ctx.fillText(sep, x, yNames)
-        x += sepW
-      }
-      const ti = TYPES.indexOf(p.type as typeof TYPES[number])
-      ctx.globalAlpha = 1
-      ctx.fillStyle = ti >= 0 ? OC[ti] : '#ada9a0'
-      ctx.fillText(p.t, x, yNames)
-      x += ctx.measureText(p.t).width
-    })
-
-    // Line 2: meanings
-    ctx.font = '300 10px "IBM Plex Mono"'
-    ctx.globalAlpha = 0.75
-    ctx.fillStyle = '#c8c5bc'
-    ctx.textAlign = 'center'
-    ctx.fillText(parts.map(p => p.m).join('  ·  '), CX, yMeans)
-    ctx.globalAlpha = 1
-  }, [])
 
   const update = useCallback((dt: number) => {
     const S = stateRef.current
@@ -398,12 +374,12 @@ export default function OrbitCanvas({ data, onSelectNode, selParts }: Props) {
       S.selRing = null
     }
 
-    // Animate rings: expand focused ring, contract others
+    // Animate rings: expand focused ring dramatically, contract others
     for (let i = 0; i < 3; i++) {
       const tgt = S.selRing !== null
-        ? (i === S.selRing ? S.ringT[i] * 1.5 : S.ringT[i] * 0.48)
+        ? (i === S.selRing ? S.ringT[i] * 1.65 : S.ringT[i] * 0.38)
         : S.ringT[i]
-      S.rings[i] += (tgt - S.rings[i]) * 0.12
+      S.rings[i] += (tgt - S.rings[i]) * 0.14
     }
     S.sunSc = 1
     S.fading.forEach(n => { n.op = Math.max(0, n.op - dt * 0.012) })
@@ -476,7 +452,6 @@ export default function OrbitCanvas({ data, onSelectNode, selParts }: Props) {
       drawSun(ctx)
       S.fading.forEach(n => drawNode(ctx, n, true))
       S.nodes.forEach(n => drawNode(ctx, n, false))
-      drawSelInfo(ctx)
       rafRef.current = requestAnimationFrame(loop)
     }
     rafRef.current = requestAnimationFrame(loop)
@@ -530,7 +505,7 @@ export default function OrbitCanvas({ data, onSelectNode, selParts }: Props) {
       cv.removeEventListener('touchstart', handleTouch)
       window.removeEventListener('resize', handleResize)
     }
-  }, [data, initStars, resize, updRT, update, drawStars, drawRings, drawSun, drawNode, drawSelInfo, nodeAt, onSelectNode])
+  }, [data, initStars, resize, updRT, update, drawStars, drawRings, drawSun, drawNode, nodeAt, onSelectNode])
 
   return (
     <div style={{ position: 'relative', width: '100%', height: '100%' }}>

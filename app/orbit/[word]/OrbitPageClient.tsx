@@ -89,7 +89,7 @@ export default function OrbitPageClient({ data }: { data: WordData }) {
       <div className="orbit-root">
         {/* Canvas area */}
         <div className="orbit-canvas-wrap">
-          <OrbitCanvas data={data} onSelectNode={setSelectedNode} selParts={nodeParts} />
+          <OrbitCanvas data={data} onSelectNode={setSelectedNode} />
         </div>
 
         {/* Desktop sidebar */}
