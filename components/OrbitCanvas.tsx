@@ -13,8 +13,10 @@ interface CanvasNode {
   idx: number
   cnt: number
   angle: number
-  x: number
+  x: number   // orbit position
   y: number
+  px: number  // rendered position (lerps to pin when selected)
+  py: number
   col: string
   op: number
   born: number
@@ -257,7 +259,7 @@ export default function OrbitCanvas({ data, onSelectNode }: Props) {
       ctx.setLineDash([])
       ctx.beginPath()
       ctx.moveTo(CX, CY)
-      ctx.lineTo(n.x, n.y)
+      ctx.lineTo(n.px, n.py)
       ctx.stroke()
       ctx.shadowBlur = 0
     } else {
@@ -267,23 +269,25 @@ export default function OrbitCanvas({ data, onSelectNode }: Props) {
       ctx.setLineDash([1, 4])
       ctx.beginPath()
       ctx.moveTo(CX, CY)
-      ctx.lineTo(n.x, n.y)
+      ctx.lineTo(n.px, n.py)
       ctx.stroke()
       ctx.setLineDash([])
     }
     if (wd) {
       const pt = wd.parts.find(p => p.type === TYPES[n.ring])
       if (pt) {
-        const mx = (CX + n.x * 2) / 3
-        const my = (CY + n.y * 2) / 3
+        const lx = (CX + n.px * 2) / 3
+        const ly = (CY + n.py * 2) / 3
+        // Name first (top), meaning below
         ctx.globalAlpha = isS ? 0.9 : 0.65
-        ctx.font = `italic 300 ${isS ? 17 : 14}px "Fraunces"`
+        ctx.font = `600 ${isS ? 13 : 11}px "IBM Plex Mono"`
         ctx.fillStyle = n.col
         ctx.textAlign = 'center'
-        ctx.fillText(pt.m, mx, my - 3)
-        ctx.font = `400 ${isS ? 12 : 10}px "IBM Plex Mono"`
+        ctx.fillText(pt.t, lx, ly - 3)
+        ctx.font = `italic 300 ${isS ? 15 : 13}px "Fraunces"`
         ctx.globalAlpha = isS ? 0.75 : 0.5
-        ctx.fillText(pt.t, mx, my + (isS ? 15 : 12))
+        ctx.fillStyle = '#c8c5bc'
+        ctx.fillText(pt.m, lx, ly + (isS ? 16 : 14))
       }
     }
     ctx.restore()
@@ -304,43 +308,44 @@ export default function OrbitCanvas({ data, onSelectNode }: Props) {
     const baseR = (6 + f * 6) * (isFocused ? 1 : 0.5)
     const r = baseR * (isS ? 1.5 : isH ? 1.3 : 1)
 
+    // Use visual (lerped) position for rendering
+    const vx = fading ? n.x : n.px
+    const vy = fading ? n.y : n.py
+
     // Obsidian-style: multi-layer glow for selected node
     if (isS && !fading) {
       const pulse = 0.5 + 0.5 * Math.sin(S.t * 0.003)
-      // Outermost soft pulse
       ctx.globalAlpha = (0.07 + 0.07 * pulse) * n.op
       ctx.fillStyle = n.col
       ctx.beginPath()
-      ctx.arc(n.x, n.y, 50 + 8 * pulse, 0, 6.283)
+      ctx.arc(vx, vy, 50 + 8 * pulse, 0, 6.283)
       ctx.fill()
-      // Mid glow
       ctx.globalAlpha = 0.16 * n.op
       ctx.fillStyle = n.col
       ctx.beginPath()
-      ctx.arc(n.x, n.y, 30, 0, 6.283)
+      ctx.arc(vx, vy, 30, 0, 6.283)
       ctx.fill()
-      // Inner bright ring
       ctx.globalAlpha = 0.3 * n.op
       ctx.fillStyle = n.col
       ctx.beginPath()
-      ctx.arc(n.x, n.y, 18, 0, 6.283)
+      ctx.arc(vx, vy, 18, 0, 6.283)
       ctx.fill()
     } else if (isH && !fading) {
       ctx.globalAlpha = 0.15 * a
       ctx.fillStyle = n.col
       ctx.beginPath()
-      ctx.arc(n.x, n.y, 24, 0, 6.283)
+      ctx.arc(vx, vy, 24, 0, 6.283)
       ctx.fill()
     }
 
     ctx.globalAlpha = a
-    const dg = ctx.createRadialGradient(n.x, n.y, 0, n.x, n.y, r)
+    const dg = ctx.createRadialGradient(vx, vy, 0, vx, vy, r)
     dg.addColorStop(0, '#ffffff')
     dg.addColorStop(0.4, n.col)
     dg.addColorStop(1, n.col + '00')
     ctx.fillStyle = dg
     ctx.beginPath()
-    ctx.arc(n.x, n.y, r, 0, 6.283)
+    ctx.arc(vx, vy, r, 0, 6.283)
     ctx.fill()
 
     ctx.globalAlpha = a
@@ -348,14 +353,14 @@ export default function OrbitCanvas({ data, onSelectNode }: Props) {
     ctx.font = `700 ${labelSize}px "IBM Plex Mono"`
     ctx.fillStyle = isH || isS ? '#efd64c' : (isFocused ? '#f0ede8' : '#ada9a0')
     ctx.textAlign = 'center'
-    const labelY = n.y + r + (isS ? 22 : 18)
-    ctx.fillText(n.word, n.x, labelY)
+    const labelY = vy + r + (isS ? 22 : 18)
+    ctx.fillText(n.word, vx, labelY)
 
     if (isFocused) {
       ctx.font = `italic 300 ${isS ? 14 : 12}px "Fraunces"`
       ctx.globalAlpha = a * (isH || isS ? 0.85 : 0.35)
       ctx.fillStyle = isH || isS ? '#efd64c' : '#ada9a0'
-      ctx.fillText(n.hint, n.x, labelY + (isS ? 20 : 16))
+      ctx.fillText(n.hint, vx, labelY + (isS ? 20 : 16))
     }
     ctx.globalAlpha = 1
   }, [drawConn])
@@ -396,7 +401,7 @@ export default function OrbitCanvas({ data, onSelectNode }: Props) {
           S.nodes.push({
             word: item.w, hint: item.h, ring: ri, idx: i, cnt: orb.length,
             angle: -Math.PI / 2 + ri * 0.5 + (6.283 * i) / orb.length,
-            x: CX, y: CY, col: OC[ri], op: 0, born: S.t,
+            x: CX, y: CY, px: CX, py: CY, col: OC[ri], op: 0, born: S.t,
             delay: ri * 60 + i * 40, orbitable: item.orbitable,
           })
         })
@@ -404,6 +409,8 @@ export default function OrbitCanvas({ data, onSelectNode }: Props) {
     }
 
     const spd: [number, number, number] = [0.06, 0.04, 0.028]
+    const pinX = CX
+    const pinY = CHRef.current * 0.82
     S.nodes.forEach(n => {
       n.angle += spd[n.ring] * dt * 0.001
       const r = S.rings[n.ring]
@@ -411,6 +418,14 @@ export default function OrbitCanvas({ data, onSelectNode }: Props) {
       n.y = CY + r * Math.sin(n.angle)
       const age = S.t - n.born
       if (age > n.delay) n.op = Math.min(1, n.op + dt * 0.015)
+      // Lerp visual position: selected node slides to bottom-center pin
+      if (S.selW === n.word) {
+        n.px += (pinX - n.px) * 0.09
+        n.py += (pinY - n.py) * 0.09
+      } else {
+        n.px += (n.x - n.px) * 0.15
+        n.py += (n.y - n.py) * 0.15
+      }
     })
   }, [])
 
@@ -418,7 +433,7 @@ export default function OrbitCanvas({ data, onSelectNode }: Props) {
     let best: CanvasNode | null = null
     let bd = 999
     for (const n of stateRef.current.nodes) {
-      const d = Math.hypot(n.x - mx, n.y - my)
+      const d = Math.hypot(n.px - mx, n.py - my)
       if (d < 36 && d < bd) { bd = d; best = n }
     }
     return best
