@@ -36,52 +36,44 @@ export default function OrbitPageClient({ data }: { data: WordData }) {
           overflow: hidden;
           background: #0e0d13;
           display: flex;
-          flex-direction: column;
+          flex-direction: row;
         }
         .orbit-canvas-wrap {
           position: relative;
           flex: 1;
+          min-width: 0;
         }
-        /* Desktop overlays */
-        .overlay-info {
-          position: absolute;
-          top: 20px;
-          right: 20px;
-          z-index: 10;
-          max-width: 260px;
+        /* Desktop sidebar */
+        .desktop-sidebar {
+          width: 320px;
+          flex-shrink: 0;
+          padding: 28px 24px;
+          overflow-y: auto;
+          border-left: 1px solid rgba(255,255,255,0.04);
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
         }
-        .overlay-morpheme {
-          position: absolute;
-          bottom: 48px;
-          left: 20px;
-          z-index: 10;
-        }
-        .overlay-etymology {
-          position: absolute;
-          bottom: 16px;
-          left: 50%;
-          transform: translateX(-50%);
+        .desktop-etymology {
           font-family: var(--font-ibm-plex-mono);
-          font-size: 9px;
+          font-size: 10px;
           color: rgba(173,169,160,0.4);
           letter-spacing: 0.5px;
-          text-align: center;
-          max-width: 400px;
-          z-index: 10;
-          white-space: nowrap;
+          line-height: 1.6;
         }
         /* Mobile bottom panel (hidden on desktop) */
         .mobile-panel {
           display: none;
         }
         @media (max-width: 640px) {
+          .orbit-root {
+            flex-direction: column;
+          }
           .orbit-canvas-wrap {
             flex: none;
             height: 58dvh;
           }
-          .overlay-info,
-          .overlay-morpheme,
-          .overlay-etymology {
+          .desktop-sidebar {
             display: none;
           }
           .mobile-panel {
@@ -98,17 +90,13 @@ export default function OrbitPageClient({ data }: { data: WordData }) {
         {/* Canvas area */}
         <div className="orbit-canvas-wrap">
           <OrbitCanvas data={data} onSelectNode={setSelectedNode} selParts={nodeParts} />
+        </div>
 
-          {/* Desktop overlays */}
-          <div className="overlay-info">
-            <InfoPanel data={data} selectedNode={selectedNode} nodeParts={nodeParts} onSpeak={speak} />
-          </div>
-          <div className="overlay-morpheme">
-            <MorphemeEquation parts={data.parts} />
-          </div>
-          <div className="overlay-etymology">
-            {data.etymology}
-          </div>
+        {/* Desktop sidebar */}
+        <div className="desktop-sidebar">
+          <InfoPanel data={data} selectedNode={selectedNode} nodeParts={nodeParts} onSpeak={speak} desktop />
+          <MorphemeEquation parts={data.parts} />
+          <div className="desktop-etymology">{data.etymology}</div>
         </div>
 
         {/* Mobile bottom panel */}
